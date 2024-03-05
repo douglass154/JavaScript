@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            min-height: 97vh;
+        }
+
+        h1 {
+            padding: 15px;
+        }
+
+        div {
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+
+        div #velocidade {
+            border: none;
+            border-bottom: 2px solid black;
+            font-size: 1.3rem;
+            text-align: center;
+            width: 50px;
+            margin: 0 3px;
+        }
+
+        div #velocidade:focus-visible {
+            outline: none;
+        }
+
+        #verificar {
+            padding: 10px;
+            width: 150px;
+            border-radius: 25px;
+            border: none;
+            background-color: skyblue;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            width: 200px;
+            text-align: start;
+            border-bottom: 2px solid black;
+        }
+
+        #multa {
+            margin-top: 15px;
+            width: 220px;
+            text-align: start;
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sitema de Multas</h1>    
+    <div>Velocidade do carro <input type="number" name="velocidade" id="velocidade" max="3"> <strong>Km/h</strong></div>
+    <input type="button" id="verificar" value="Verificar" onclick="calcular()">
+
+    <div id="resultado">
+        Resultado: 
+    </div>
+    <div id="multa">
+        Multado em:
+    </div>
+
+    <script>
+        function calcular() {
+            var txtvel = window.document.getElementById('velocidade')
+            var resultado = window.document.getElementById('resultado')
+            var vel = Number(txtvel.value)
+            resultado.innerHTML = `Resultado: ${vel} <strong>Km/h</strong>`
+
+            var velMax = 80
+            var multa = window.document.getElementById('multa')
+            var valorMulta = 1500
+
+            if(vel > velMax) {
+                multa.innerHTML = `Multado em: R$ ${valorMulta}`
+            } else {
+                multa.innerHTML = 'Não possui multa!!'
+                multa.style.textAlign = 'center'
+            }
+        }
+    </script>
+</body>
+</html>

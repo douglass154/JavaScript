@@ -1,0 +1,597 @@
+          
+                              ===  DOCUMENTOS RECOMENDADOS PARA APRENDER JAVASCRIPT  ===
+
+
+• ECMA-262
+• MDN Web Docs (developer.mozilla.org)
+
+
+
+                                                                      ===  NODE.JS  ===
+
+
+• Para abrir o terminal no VSCode aperte Ctrl + Shift + ''
+• Para abrir o node.js no terminal, escreva node, apenas
+• Para sair do node.js basta escrever .exit
+• Para sair do terminal basta escrever exit
+
+
+
+                                                           ===  COMANDOS JAVASCRIPT  ===
+
+
+==> ALERT <==
+
+O método Window.alert() mostra uma caixa de diálogo de aviso com o conteúdo opcionalmente especificado e um botão OK. ( exemplo: window.alert("Hello world!") ou alert("Hello world!") )
+
+Sintaxe:
+---> window.alert("message") ou alert("message")
+
+• message é uma string opcional com o texto que você quer exibir na caixa de diálogo, ou, ainda, um objeto a ser convertido em string e exibido.
+
+
+==> CONFIRM <==
+
+O método Window.confirm() mostra uma janela modal com uma mensagem opcional e dois botões, OK e Cancelar.
+
+Sintaxe:
+---> resultado = window.confirm("mensagem") ou confirm("mensagem")
+
+• mensagem é a string opcional que será mostrada no diálogo.
+
+• resultado é um booleano indicando se OK ou cancelar foram selecionados (true indicará OK e false indicará cancelar).
+
+
+==> PROMPT <==
+
+O Window.prompt() exibe uma caixa de diálogo com uma mensagem opcional solicitando ao usuário a entrada de algum texto. Todo texto que o usuário digitar, independente de ser número ou texto, o prompt tratará as informações apenas como strings.
+
+Sintaxe:
+---> resultado = window.prompt(texto, valor) ou prompt(texto, valor)
+
+• resultado: é uma cadeia de caracteres contendo o texto digitado pelo usuário, ou um valor nulo.
+
+• texto: é uma cadeia de caracteres para exibir ao usuário. Este parâmetro é opcional e pode ser omitido se não há nada para mostrar na janela de prompt.
+
+• valor: é uma cadeia de caracteres contendo o valor padrão exibido na caixa de entrada de texto. É um parâmetro opcional. Note que no Internet Explorer 7 e 8, se você não fornecer este parâmetro, a cadeia de caracteres "undefined" é o valor padrão.
+
+
+
+                                                           ===  VARIÁVEIS JAVASCRIPT  ===
+
+
+Uma variável representa um contêiner ou espaço na memória física ou virtual de um computador, onde diferentes tipos de dados (valores) são armazenados durante a execução de um programa. A cada variável é atribuído um nome descritivo ou identificador que se refere ao valor salvo. Os dados armazenados podem mudar de valor ou serem constantes.
+
+No java script moderno, além de utilizar a palavra var, também podemos usar a palavra let
+
+Na utilização de strings nas variáveis podemos utilizar três tipos de aspas para indentifica-las.
+Aspa dupla, aspas simples e craze.
+
+==> Exemplo:
+
+• var s1 = "exemplo1"
+
+• var s2 = 'exemplo2'
+
+• var s3 = `exemplo3`
+
+Existem diferenças entre utilizar uma ou outra mas ainda não sei qual é
+
+
+O javascript não diferencia números de tipo inteiro (int) e de tipos real (float), para o javascript todos os numero são de um mesmo tipo, o tipo number.
+
+---> O number tem dois valores internos muito importantes, que são:
+
+• Infinity
+• NaN (Not and Number)
+
+
+Também existem os valores de tipo boolean, valores true e false
+
+
+
+                                                   ===  TIPOS DE VARIÁVEIS JAVASCRIPT  ===
+
+
+==> Todos os Data Types (ou tipos primitivos) e alguns de seu valores internos:
+
+• Number
+     - Infinity
+     - NaN
+
+• String
+
+• Boolean
+
+• null
+
+• undefined
+
+• object
+     - Array
+
+• function
+
+Para saber o tipo de cada variavel basta usar o typeof (tipo de), esse comando vai mostrar qual o tipo de cada valor de variavel.
+
+
+
+                                       ===  CONVERSÕES DE TIPOS DE VARIÁVEIS JAVASCRIPT  ===
+
+
+==> Conversão de String para Number <==
+
+--> Number.parseInt(n) ou apenas parseInt(n)
+
+• Converte um número em string para number int (inteiro)
+
+
+--> Number.parseFloat(n) ou apenas parseFloat(n)
+
+• Converte um número em string para number float (real)
+
+
+--> Number(n)
+
+• Este comando não se limita a conversão de apenas um tipo (int ou float), ele converte um número em string para qualquer um dos tipos number que o usuário digitar, float (real) ou int (inteiro)
+
+
+==> Conversão de Number para String <==
+
+--> String(n)
+--> n.toString()
+
+• Ambos os método retornam uma string representando o objeto n especificado.
+
+
+
+                                             ===  VARIÁVEIS JAVASCRIPT (LET, VAR, CONST) ===
+
+
+
+                                                 ===  FORMATANDO STRINGS JAVASCRIPT  ===
+
+
+var s = 'javaScript'
+
+'Eu estou aprendendo s'             // Não faz interpolação
+'Eu estou aprendendo' + s        // Usa concatenação
+`Eu estou aprendendo ${s}`   // Usa template string
+
+--> s.length                 // Diz quantos caracteres a string tem
+--> s.toUpperCase()    // Define tudo para 'MAIÚSCULAS'
+--> s.toLowerCase()   // Define tudo para 'minúsculas'
+
+${} Este simbolo (chamado de placeholder) é usado entre crases (``) para delimitar a template string
+
+Exemplo de template string e concatenação:
+
+var = nome
+var = idade
+var = nota
+
+Concatenação:  'O aluno ' + nome + ' com idade de ' + idade + ' anos, recebeu a nota ' + nota
+
+Template string:  `O aluno ${nome} com idade de ${idade} anos, recebeu a nota ${nota}`
+
+
+s.length                // Diz quantos caracteres a string tem
+s.toUpperCase()   // Define tudo para 'MAIÚSCULAS'
+s.toLowerCase()  // Define tudo para 'minúsculas'
+
+
+
+                                                 ===  FORMATANDO NÚMEROS JAVASCRIPT  ===
+
+
+Variável de exemplo: var n1 = 1543.5
+
+
+--> n1.toFixed(2)
+
+• Define quantas casas decimais o número vai ter (coloque a quantidade de casas entre o parênteses).
+exemplo de como ficaria: 1543.50
+
+
+--> n1.toFixed().replace('.' , ',')
+
+• Troca o ponto que determina as casas decimais pela vírgula (exemplo: 5.5  por  5,5).
+exemplo de como ficaria: 1543,50
+
+
+--> n1.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+--> n1.toLocaleString('pt-BR' , {style: 'currency' , currency: 'USD'})
+--> n1.toLocaleString('pt-BR' , {style: 'currency' , currency: 'EUR'})
+
+• Transformaria o número em quantidade de dinheiro, em cada moeda de cada país.
+exemplo de como ficaria:
+
+R$ 1,543.50
+US$ 1,543.50
+€ 1,543.50
+
+
+
+                                                    ===  REGRAS VARIÁVEIS JAVASCRIPT  ===
+
+
+O nome de cada variável nós chamamos de identificador, existem algumas regras para a nomeação de identificadores.
+
+• A primeira regra é que elas podem começar com uma letra, com um $ ou com um underline _
+
+• Não podem começar com números
+
+• É possível utilizar letras ou número
+
+• É possível usar acentos e símbolos
+
+• Não podem conter espaços, se quiser espaça-las coloque um underline _ entre as palavras
+
+• Não podem ser palavras reservadas (exemplo: function, alert, etc)
+
+
+
+                                                       ===  OPERADORES JAVASCRIPT  ===
+
+
+Alguns tipos de operadores:
+
+
+---> Aritméticos <---
+
+• +    -> soma
+• -     -> subtração
+• *    -> multiplicação
+• /    -> divisão
+• %   -> resto da divisão inteira
+• **  -> potencia
+
+Ordem de precendência dos operadores aritméticos (de cima pra baixo):
+
+1 - ()
+2 - **
+3 - * / %
+4 - + -
+
+
+
+---> Atribuição <---
+
+Atribuição Simples:
+
+• var a = 5 + 3                // variável a = (recebe) 5 + 3     que da 8
+• var b = a % 5               // variável b = a % 5                   que da 3
+• var c = 5 * b ** 2        // variável c = 5 * b ** 2            3 ** 2 == 9 * 5 == que da 45
+• var d = 10 - a / 2         // variável d = 10 - a / 2             8 / 2 == 10 - 4 == que da 6
+• var e = 6 * 2 / d          // variável e = 6 * 2 / d              6 * 2 == 12 / 6 == que da 2
+• var f = b % e + 4 / e    // variável f = (b % e) + (4 / e)    3 % 2 == 1 & 4 / 2 == 2 & 2 + 1 == que da 3
+
+
+Simplificando atribuições:
+
+Só podemos simplificar a atribução de uma variável, se ela mesma receber ela mais outro valor. Quando colocamos uma mesma variável para fazer uma operação com ela mesma, ela deixa de ter o valor atribuído para ela antes, e passa a ter o valor atribuído depois da operação.
+
+Exemplo:
+
+var n = 3
+n = n + 5        // variável n deixa de ser 3 e passa a ser 8
+n = n * 2         // variável n deixa de ser 8 e passa a ser 16
+
+a simplificação dessas operações ficaria:
+
+n += 5
+n *= 2
+
+E o mesmo se repete para todas as outras operações. Mas lembrando que só funciona se uma variável receber ela mesma mais outro valor.
+
+
+
+---> Incremento <---
+
+Se você colocar n++ ou n- - , o programa irá somar ou subtrair +1 ou -1 ao número anterior.
+
+Exemplo:
+
+var n = 5
+
+n++   // agora n é igual a 6
+n- -    // agora n é igual a 5 novamente
+n- -    // e agora n é igual a 4
+
+Pode-se colocar os operadores tanto atrás da variável, quanto na frente, a ordem que você vai colocar os operadores em relação a variável faz bastante diferença.
+
+é chamado de pré incremento, quando se coloca o ++ antes da variável e pós incremento quando se coloca depois da variável, e o mesmo se repete para o pré decremento (antes) e pós decremento (depois) 
+
+
+
+---> Relacionais <---
+
+Os operadores relacionais são:
+
+• >        // maior que
+• <        // menor que
+• >=      // maior ou igual
+• <=      // menor ou igual
+• ==      // igual
+• ===    // identico
+• !=       // diferente
+• !==     // desigual restrito
+
+Todo resultado dos operadores relacionais serão do tipo boolean ou seja true ou false
+
+
+Identidade nos operadores relacionais:
+
+5 == 5         // true
+5 == '5'       // true
+5 === '5'     // false
+5 === 5      // true
+
+O sinal de igualdade não testa o tipo, no segundo exemplo temos um 5 de tipo inteiro e um 5 de tipo string, mas o que o javascript faz é analisar se esse 5 tem o mesmo valor que o outro, e como eles tem o mesmo valor, então o javascript diz que ambos são iguais e retorna TRUE.
+
+Mas, no terceiro exemplo, temos três sinais de = que checa se ambos os valores são identicos, ou seja ele verifica se eles tem os mesmos valores e se são do mesmo tipo, eles são do mesmo valor, ambos são o número 5, mas, NÃO são do mesmo tipo, um é do tipo inteiro e outro é do tipo string, então o javascript retorna FALSE.
+
+
+
+---> Lógicos <---
+
+Os operadores lógicos são:
+
+• !        // negação        NOT
+• &&    // conjunção     AND
+• ||     // disjunção      OR
+
+
+• O operador !  vai transformar tudo que for True em False e tudo que for False em True
+
+• O operador &&  vai dar o resultado True apenas quando ambos os valores forem True, basta apenas 1 ser False que ele retornará False
+
+• O operador ||  vai precisar apenas de que um dos valores sejam True para retornar True, se ambos os valores forem False, ele retornará False
+
+
+Exemplos:
+
+idade >= 15 && idade <= 17           // idade está entre 15 e 17?
+estado == 'RJ' || estado == 'SP'      // estado é igual a RJ ou SP?
+salário > 1500 && sexo != 'M'         // salário é maior que 1500 e o sexo é Feminino?
+
+
+
+---> Ternários <---
+
+Os operadores ternários são:
+
+• ?
+• :
+
+
+Exemplo de uso:
+
+teste ? true : false          // este exemplo é apenas para indicar como útilizar
+
+média >= 7.0 ? "Aprovado" : "Reprovado"
+
+Se lê dessa forma: 
+media é maior ou igual a 7.0 ? se for TRUE escreva "Aprovado" , se for FALSE escreva "Reprovado"
+
+A média nesse caso é o teste, o aprovado é o True e o Reprovado é o False.
+Se a média for maior ou igual a 7.0 aparecerá Aprovado (True), caso contrário aparecerá Reprovado (False).
+
+
+
+Ordem de precedência de todos os operadores, de cima pra baixo para o tipo de operadores e em linha para os operadores em sí.
+
+1 -> Aritméticos: 1= ()   2= **   3= / * %   4= + -
+
+2 -> Relacionais: não tem ordem entre eles
+
+3 -> Lógicos: 1= ! (NOT)   2= && (AND)   3= || (OR)
+
+
+
+                                                                 ===  MÓDULO C  ===
+
+                                                ===  DOM (DOCUMENT OBJECT MODEL)  ===
+
+
+Uma coisa importante que devemos conhecer e saber fazer, é a Árvore DOM do nosso site, basicamente a Árvore DOM começa da raíz, e esse raiz dentro do navegador, chamamos de window (janela), então tudo dentro do javascript está dentro de um objeto chamado window.
+
+Dentro do window, temos vários outros objetos, três exemplos deles são os objetos:
+
+---> location
+• O objeto location diz qual é a localização do seu site (URL, página atual, página anterior, etc).
+
+---> document
+• o HTML, e dentro do html temos dois objetos (filhos do HTML) muito importantes, o head e o body,
+
+Dentro do head, temos várias tags importantes como meta , title , link , etc.
+Dentro do body, temos mais tags como h1 , p , div , main , header , etc.
+
+---> history
+• Guarda de onde você veio, pra onde você vai, e isso facilita a navegação dentro do seu site
+
+
+Conseguimos navegar dentro de uma Árvore DOM da maneira que acharmos mais interessante, e pra isso existem várias maneira de navegarmos entre os elementos (elementos é tudo e qualquer coisa que aparecem na Árvore DOM).
+
+Podemos selecionar esses elementos dentro do JavaScript para poder navegar por eles dentro da nossa Árvore DOM, abaixo terá 5 exemplos de metódos de acesso.
+
+
+---> Por Marca ou TagName
+• O comando para selecionar elementos por Marca é:
+ document.getElementsByTagName('')[]
+
+Este comando fica dentro de document e é o metódo getElementsByTagName('')[]
+
+dentro do parenteses você colocará a tag que você deseja.
+
+dentro do colchete você colocará (se tiver mais de uma tag do mesmo tipo) um número que represente a colocação daquela tag, exemplo, se tiver 3 tags p no documento html e você quiser selecionar a primeira tag p , coloque o numero [0].
+
+O número 0 pega a primeira tag p
+O número 1 pega a segunda tag p
+O número 2 pega a terceira tag p
+e assim por diante...
+
+
+---> Por ID
+• O comando para selecionar elementos por ID é:
+ document.getElementById()
+
+
+---> Por Nome
+• O comando para selecionar elementos por Nome é:
+ document.getElementsByName()
+
+
+---> Por Classe
+• O comando para selecionar elementos por Nome é:
+ document.getElementsByClassName()
+
+
+---> Por Seletor CSS
+• Os comandos para selecionar elementos por Seletor CSS são:]
+ document.querySelector()
+ document.querySelectorAll()
+
+
+
+                                                                  ===  EVENTOS DOM  ===
+
+
+Muita coisa sobre eventos DOM então para saber mais sobre eles acesse esses sites:
+
+https://developer.mozilla.org/en-US/docs/Web/Events
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events
+
+https://www.w3schools.com/jsref/default.asp
+https://www.w3schools.com/js/js_htmldom_events.asp
+
+https://pt.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-events/a/dom-event-types
+https://awari.com.br/lista-de-eventos-dom-em-javascript/
+
+
+
+                                                         ===  FUNÇÕES (EVENTOS DOM)  ===
+
+
+Para disparar os eventos DOM precisamos de uma function
+
+Uma function (função) em javascript é um conjunto de códigos que vão ser executadas só quando o evento ocorrer.
+
+para executar essas linhas de código, o primeiro passo é coloca-las dentro de um bloco. 
+Um bloco em JavaScript ele é delimitado entre os sinais de chaves {} , então você abre chaves , escreve o código e fecha chaves.
+
+Esse bloco , tem que ser nomeado como uma function, e nomear a function com o nome da ação que vai acontecer, e depois abrir e fechar parênteses. Exemplo:
+
+       function ação() {
+               linha de código
+               linha de código
+       }
+
+Dentro dos parênteses, podemos colocar opcionalmente alguns parâmetros, pode ser um ou pode ser vários parâmetros.
+
+
+Para adicionar os eventos no Javascript, basta usar o comando addEventListener().
+Dentro dos parenteses deste comando podemos chamar o nome do evento que queremos e logo ao lado dar um nome para ele, esse nome servirá para nomear a function. 
+Exemplo:
+
+addEventListener( 'nome do evento desejado'  ,  nome para colocar na function )
+
+addEventListener('Click' , clicar)
+addEventListener('mouseenter' , entrou)
+addEventListener('mouseout' , saiu)
+
+
+
+                                                                 ===  MÓDULO C  ===
+
+                                                     ===  CONDIÇÕES EM JAVASCRIPT  ===
+
+
+• Estrutura da condicional:
+
+if (condição) {
+       códigos
+       caso TRUE
+} else {
+       códigos
+       caso FALSE
+}
+
+
+
+                                              ===  TIPOS DE CONDIÇÕES EM JAVASCRIPT  ===
+
+
+• Condição Simples:
+
+if (condição) {
+      códigos
+      caso TRUE
+}
+
+Na condição simples, os códigos só serão executados se a condição for verdadeira, caso contrário, nada será executado e o fluxo do código seguirá normalmente.
+
+
+
+• Condição Composta:
+
+if (condição) {
+       códigos
+       executado caso TRUE
+} else {
+       códigos
+       executado caso o if acima seja FALSE
+}
+
+Na condição composta, os códigos de if serão executados se a condição for verdadeira, caso a condição seja falsa, os códigos do else serão executados, e depois o fluxo do código seguirá normalmente.
+
+
+
+• Condições Aninhadas:
+
+if (condição) {
+       códigos
+       executado caso TRUE
+
+} else if (condição 2) {
+       códigos
+       executado caso o primeiro if seja FALSE
+
+} else if (condição 3) {
+       códigos
+       executado caso o segundo if seja FALSE
+
+} else {
+       códigos
+       executado caso todos acima sejam FALSE
+}
+
+Na condição aninhada, os códigos do PRIMEIRO if serão executados se a condição for VERDADEIRA. Caso a condição seja FALSA, podemos adicionar um else if com mais uma condição, caso o SEGUNDO if seja FALSO, podemos adicionar mais um outro else if com mais uma condição, ou encerrar por ali com apenas um else.
+
+
+
+• Condições Multiplas (switch-case):
+
+switch (expressão) {
+       case valor 1:
+             bloco de códigos
+             break
+
+       case valor 2:
+             bloco de códigos
+             break
+
+       case valor 3:
+             bloco de códigos
+             break
+
+       default:
+             bloco de códigos
+             break
+}
+
+
+
+
+
+

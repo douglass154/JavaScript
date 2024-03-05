@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Desáfio 001 | Idades</title>
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <main class="container">
+        <div>
+            <div class="ano-nascimento-container">
+                <p>Ano de nascimento:
+                    <input type="number" name="ano_nascimento" id="ano_nascimento" required min="1900" max="2024">
+                </p>
+            </div>
+            <div class="sexo-container">
+                <p> Sexo: 
+                    <input type="radio" name="sexo" id="sexo_m" value="Masculino" required> Masculino
+                    <input type="radio" name="sexo" id="sexo_f" value="Feminino" required> Feminino
+                </p>
+            </div>
+            <div class="enviar-container">
+                <input type="button" id="enviar" value="Enviar">
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </main>
+    <footer>
+        <p><span>&copy;</span> Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
