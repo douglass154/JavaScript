@@ -592,6 +592,48 @@ switch (expressão) {
 
 
 
+                                                        ===  ESTRUTURAS DE REPETIÇÃO  ===
+
+
+• Estrutura de repetição --> While() (enquanto)
+
+O While é classificado como estrutura de repetição com teste lógico no ínicio.
+enquanto a condição que for definida para while for verdadeira, todos os comando escritos dentro do bloco de while serão executados.
+
+While (condição) {
+        bloco de códigos
+}
+
+
+• Estrutura de repetição --> Do While (faça enquanto)
+
+O Do While é classificado como estrutura de repetição com teste lógico no final.
+
+De primeira, todos os comandos dentro do bloco do comando Do serão executados, e quando chegar ao final do bloco, O comando While irá verificar se a condição definida é verdadeira, enquanto a condição que for definida para while for verdadeira, todos os comando escritos dentro do bloco do comando Do serão executados.
+
+do {
+     bloco de códigos
+
+} while (condição)
+
+
+
+• Estrutura de repetição --> For
+
+O For é classificado como estrutura de repetição com variável de controle
+
+São feitas 3 cóisas, inicialização, um teste lógico, e um incremento, na primeira passagem, ele faz a inicialização e o teste lógico, se o teste lógico for verdadeiro, ele executará o bloco de comandos e quando acabar o bloco, a estrutura voltará para o início, e quando acontecer essa repetição, será adicionado o incremento, e assim a estrutura se repete, até o teste lógico ser falso.
+
+for (inicio; teste; incremento) {
+           bloco de códigos
+}
+
+
+
+
+
+
+
 
 
 

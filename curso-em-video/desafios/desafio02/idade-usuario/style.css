@@ -24,14 +24,16 @@ header {
 
 .container {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.486);
     font-size: 1.2rem;
     width: 400px;
 }
 
 .ano-nascimento-container {
     margin-bottom: 20px;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -42,11 +44,13 @@ header {
     background-color: transparent;
     font-size: 1rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .sexo-container {
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.3rem;
 }
 
 #sexo_m,
@@ -56,7 +60,7 @@ header {
 
 .enviar-container {
     text-align: center;
-    margin-bottom: 20px
+    margin-top: 40px;
 }
 
 #enviar {
@@ -69,6 +73,21 @@ header {
     font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+#resultado {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#foto {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#foto img {
+    width: 340px;
 }
 
 footer {

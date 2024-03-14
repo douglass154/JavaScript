@@ -1,0 +1,13 @@
+
+                                          ===  COMO INSERIR UMA IMAGEM PELO JAVASCRIPT  ===
+
+
+Para criar uma imagem dentro do seu site, sem ter a tag <img> previamente criada no documento HTML, primeiro crie uma váriavel para a imagem e coloque o seguinte código:
+
+==> var img = var.createElement('img')
+
+também da para colocar uma classe ou um id na tag criada com o código abaixo:
+
+==> img.setAttribute('id', 'foto')
+
+O primeiro valor dentro do parênteses determina se é um id ou uma classe, e o segundo valor determina o nome deste id/class

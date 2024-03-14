@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <title>Desáfio 001 | Idades</title>
+    <title>Desáfio 02 | Idades</title>
 </head>
 
 <body>
@@ -21,20 +21,29 @@
             </div>
             <div class="sexo-container">
                 <p> Sexo: 
-                    <input type="radio" name="sexo" id="sexo_m" value="Masculino" required> Masculino
-                    <input type="radio" name="sexo" id="sexo_f" value="Feminino" required> Feminino
+                    <label for="sexo_m">
+                        <input type="radio" name="sexo" id="sexo_m" required checked> 
+                        Masculino
+                    </label>
+                    <label for="sexo_f">
+                        <input type="radio" name="sexo" id="sexo_f" required>
+                        Feminino
+                    </label>
                 </p>
             </div>
             <div class="enviar-container">
-                <input type="button" id="enviar" value="Enviar">
+                <input type="button" id="enviar" value="Enviar" onclick="verificar()">
             </div>
         </div>
-        <div>
-
+        <div id="resultado">
+            <p>Digite os dados acima para verificar os resultados</p>
+        
         </div>
     </main>
     <footer>
-        <p><span>&copy;</span> Todos os direitos reservados</p>
+        <p><span>&copy;</span> 
+            Todos os direitos reservados
+        </p>
     </footer>
 
     <script src="script.js"></script>
