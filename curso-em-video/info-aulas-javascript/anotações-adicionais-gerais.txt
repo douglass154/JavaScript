@@ -11,3 +11,30 @@ também da para colocar uma classe ou um id na tag criada com o código abaixo:
 ==> img.setAttribute('id', 'foto')
 
 O primeiro valor dentro do parênteses determina se é um id ou uma classe, e o segundo valor determina o nome deste id/class
+
+
+
+                                                  ===  HTML DOM Element appendChild()  ===
+
+
+O appendChild acrescenta ao elemento selecionado o que for declarado na sequência entre parênteses.
+
+appendChild() é um dos métodos fundamentais da programação para a web usando o DOM. O método appendChild() insere um novo nó na estrutura do DOM de um documento, e é a segunda parte do processo criar-e-adicionar tão importante na construção de páginas web programaticamente.
+
+Saiba mais --> https://www.w3schools.com/jsref/met_node_appendchild.asp
+Saiba mais --> https://developer.mozilla.org/pt-BR/docs/Web/API/Node/appendChild
+
+
+
+                                                       ===  HTML DOM Element .value()  ===
+
+
+A propriedade value define ou retorna o valor do atributo value de um campo de texto.
+
+A propriedade value contém o valor padrão OU o valor digitado pelo usuário (ou um valor definido por um script).
+
+Saiba mais --> https://www.w3schools.com/jsref/prop_script_text.asp
+
+
+
+

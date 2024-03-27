@@ -630,10 +630,65 @@ for (inicio; teste; incremento) {
 
 
 
+                                                   ===  VARIÁVEIS COMPOSTAS (ARRAYS)  ===
+
+
+Uma variável composta/array/vetor é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação.
+
+As chaves de identificação começam do número 0. Então se um vetor tiver 10 elementos, as chaves de identificação dele irão do 0 ao 9
+
+Sintaxe:
+var num = [1, 2, 3, 4]
+
+num[4] = 5
+
+
+Comandos para arrays:
+
+• var.sort() 
+Alinha todos os elementos do array em ordem crescente.
+
+
+• var.push()
+Cria um novo elemento e acrescenta um valor a ele (definido entre os parênteses).
+
+
+• var.length
+Mostra o tamanho total que o vetor possui (também)
+
+
+• var.indexOf()
+Retorna o número da chave onde o valor definido entre os parênteses se encontra.
+
+
+---> Estruturas de repetição para arrays
+
+Uma maneira de simplificar o código para os arrays é com essa estrutura de repetição abaixo, ele é um for mais simplificado e é otimizado para variáveis compostas e objetos:
+
+Sintaxe:
+
+for (var pos in num) {
+         console.log ( num[pos] )
+}
+
+Se lê dessa maneira: Para (for) cada posição (pos) em (in) num, mostre os valores
 
 
 
+                                                          ===  FUNÇÕES EM JAVASCRIPT  ===
 
 
+As funções são ações executadas assim que são chamadas ou em decorrência de algum evento.
+Uma função pode receber parâmetros e retornar um resultado.
 
+Sintaxe: 
+
+function ação(parametros) {
+
+      return resultado
+}
+
+ação(5)
+
+Nessa sintaxe, oque está acontecendo é que a chamada 'ação(5)' vai para o parametro, então o parâmetro vai valer 5, e no final podemos dar um retorno de um resultado, esse retorno será voltado para a chamada
 

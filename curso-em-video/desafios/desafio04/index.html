@@ -10,15 +10,22 @@
 
 <body>
     <header>
-        
+        <h1>Tabuada</h1>
     </header>
 
     <main class="container">
-        <div>
-            
+        <div class="input-container">
+            <div id="input-number-container">
+                <label for="num">Número:</label>
+                <input type="number" name="num" id="num">
+            </div>
+
+            <input id="btn-gerar" type="button" value="Gerar Tabuada" onclick="tabuada()">
         </div>
-        <div>
-            
+        <div id="tabuada-container">
+            <select name="tabuada" id="seltabuada" size="10">
+                <option disabled id="opt-text">Aguardando informações...</option>
+            </select>
         </div>
     </main>
 
