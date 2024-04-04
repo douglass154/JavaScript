@@ -1,0 +1,283 @@
+
+                                                             ==  13. VARIÁVEIS COM LET  ==
+
+
+• Não podemos criar variáveis com palavras reservadas
+• Variáveis precisam ter nomes significativos
+• Não podemos começar o nome de uma variável com um número
+• Não podem conter espaços ou traços
+• Utilizamos camelCase
+• Possuem Case-sensitive (letra maiúscula e minúscula fazem diferença)
+• Não podemos redeclarar variáveis com let / var
+• Não utilize var, utilize let
+
+
+
+                                                         ==  14. CONSTANTES COM CONST  ==
+
+
+• Não podemos criar constantes com palavras reservadas
+• Constantes precisam ter nomes significativos
+• Não podemos começar o nome de uma constante com um número
+• Não podem conter espaços ou traços
+• Possuem Case-sensitive (letra maiúscula e minúscula fazem diferença)
+• Utilize const para declara-la
+
+
+
+                                                     ==  18. DIFERENÇAS ENTRE VAR E LET  ==
+
+
+--> 1ª Diferença:
+• Utilizando let, não podemos redeclarar uma variável com o mesmo nome, utilizando var podemos redeclarar mas não é recomendado.
+
+--> 2ª Diferença:
+
+
+
+                                                      ==  19. TIPOS DE DADOS PRIMITIVOS  ==
+
+
+• String (textos que estiverem entre aspas dupla, simples ou craze)
+
+• Number (int or float)
+
+• boolean (true or false)
+
+• Undefined => Não aponta pra local nenhum na memória
+
+• null => Não aponta pra local nenhum na memória
+
+
+--> A diferença entre null e undefined:
+
+• null, nós explicitamente definimos que queremos uma variável sem valor.
+
+• undefined, a própria linguagem JavaScript define uma variável como undefined, nós nunca iremos definir uma variável como undefined.
+
+
+
+                                                        ==  24. MAIS SOBRE STRINGS  ==
+
+
+==> Variável para os exemplos:
+let umaString = 'Um texto';
+
+Comandos:
+
+---> umaString.length
+• Mostra a quantidade de caracteres da string (também conta os espaçamentos).
+
+
+---> umaString.slice()
+• pega o trexo especificado entre os parênteses, no exemplo abaixo ele irá pegar a palavra texto da variável umaString (também é possível utilizar valores negativos).
+
+exemplo:
+console.log(umaString.slice(3, 8));
+
+
+---> umaString.indexOf()
+
+
+---> umaString.lastIndexOf()
+
+
+---> umaString.match()
+• Usa expressões regulares.
+
+
+---> umaString.search()
+• retorna o índice onde oque você pediu (entre os parênteses) foi encontrado.
+
+
+---> umaString.replace()
+• Substitui oque você pediu por outra coisa e também aceita expressões regulares.
+
+exemplo:
+• console.log ( umaString.replace( 'Um', 'Outro' ) );
+
+
+---> umaString.substring()
+• faz a mesma coisa de .slice, só que pior, vale mais a pena utilizar .slice.
+
+
+---> umaString.split()
+• Divide uma string
+
+
+==> Aula sobre strings na seção 2 aula 24. Mais sobre strings.
+
+saiba mais sobre strings também em => https://www.w3schools.com/js/
+saiba mais sobre strings também em => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+
+
+
+                                                        ==  26. MAIS SOBRE NUMBERS  ==
+
+
+Comandos:
+
+---> Number.isInteger()
+• Verifica se o valor colocado dentro dos parênteses é inteiro e retorna uma valor booleano.
+
+
+---> Number.isNaN()
+• Verifica se o valor colocado dentro dos parênteses não é um número e retorna uma valor booleano.
+
+
+---> exemplo.toString()
+• Converte a variável colocada antes do ponto para uma string
+
+
+---> exemplo.parseInt() ou parseInt(value)
+• Converte a variável colocada antes do ponto para um número inteiro
+• Converte o valor/variável selecionada dentro dos parênteses para um número inteiro
+
+
+---> exemplo.parseFloat() ou parseFloat(value)
+• Converte a variável colocada antes do ponto para um número real
+• Converte o valor/variável selecionada dentro dos parênteses para um número real
+
+
+
+                                                              ==  27. OBJETO MATH  ==
+
+
+==> Variável para os exemplos: 
+let num1 = 9.54578
+
+
+Comandos:
+
+---> Math.floor(value)
+• Arredonda para baixo o valor/variável adicionado entre os parênteses.
+
+exemplo:
+num1 = Math.floor(num1);
+console.log(num1);
+
+• num1 agora terá o valor de 9 porque o valor de num1 foi arredondado para baixo
+
+
+---> Math.ceil(value)
+• Arredonda para cima o valor/variável adicionado entre os parênteses.
+
+exemplo:
+num1 = Math.ceil(num1);
+console.log(num1);
+
+• num1 agora terá o valor de 10 porque o valor de num1 foi arredondado para cima
+
+
+---> Math.round()
+• Arredonda o valor/variável adicionado entre os parênteses para o número mais próximo.
+
+exemplo:
+se o valor de num1 for = 9.49
+o Math.round() irá arredondar o valor de num 1 para o número 9
+
+se o valor de num1 for = 9.50
+o Math.round() irá arredondar o valor de num1 para o número 10
+
+
+---> Math.max()
+• Aponta qual é o maior valor dentre as variáveis/valores que colocamos dentro dos parênteses.
+
+exemplo:
+console.log(Math.max(1, 2, 3, 4, 100, -50, -60, 1500, 300));
+
+no caso o console.log mostraria o número 1500 que é o maior valor colocado entre os parênteses.
+
+
+---> Math.min()
+• Aponta qual é o menor valor dentre as variáveis/valores que colocamos dentro dos parênteses.
+
+exemplo:
+console.log(Math.min(1, 2, 3, 4, 100, -50, -60, 1500, 300));
+
+no caso o console.log mostraria o número -60 que é o menor valor colocado entre os parênteses.
+
+
+---> Math.random()
+• Gera um número aleatório entre 0 e 1 mas o número 1 não é incluso.
+
+exemplo:
+console.log(Math.random());
+
+assim seria mostrado na tela um número aleátorio entre 0 e 1, exemplo 0.726572365
+
+• também da para aumentar o os limites entre os números que serão gerados para não ficar apenas entre 0 e 1
+
+exemplo:
+let aleatorio = Math.random() * (100 - 1) + 1;
+
+• nesse código acima está pedindo para que pegue o Math.random e multiplique pelo número máximo desejado que é 100 e o número mínimo que é 1, mais o número mínimo, agora a geração de números aleatórios ficará entre 1 e 100.
+
+
+---> Math.PI
+• Mostra o valor do Pi
+
+
+Saiba mais sobre o objeto Math => https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+
+
+                                                         === 29. ARRAYS (BÁSICO) ===
+
+
+Uma variável composta/array/vetor é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação.
+
+As chaves de identificação começam do número 0. Então se um vetor tiver 10 elementos, as chaves de identificação dele irão do 0 ao 9
+
+
+Comandos para arrays:
+
+---> var.indexOf()
+• Retorna o número da chave onde o valor definido entre os parênteses se encontra.
+
+
+---> var.sort() 
+• Alinha todos os elementos do array em ordem crescente.
+
+
+---> var.push()
+• Cria um novo elemento no final do vetor e acrescenta um valor a ele (definido entre os parênteses).
+
+
+---> var.unshift()
+• Cria um novo elemento no início do vetor e acrescenta um valor a ele (definido entre os parênteses).
+
+
+---> var.pop()
+• Remove um elemento no final do vetor
+
+
+---> var.slice(0 , 3)
+• Vai recortar os elementos escolhidos pelos índices entre os parênteses.
+
+Exemplo:
+• Se colocar para recortar entre os indíces 0 e 3, vai recortar até o elemento 2, pois o índice três não vai ser incluido no recorte, é possível colocar valores positivos e negativos.
+
+
+---> var.length
+• Mostra o tamanho total que o vetor possui (também)
+
+
+
+---> Estruturas de repetição para arrays
+
+Uma maneira de simplificar o código para os arrays é com essa estrutura de repetição abaixo, ele é um for mais simplificado e é otimizado para variáveis compostas e objetos:
+
+Sintaxe:
+
+for (var pos in num) {
+         console.log ( num[pos] )
+}
+
+Se lê dessa maneira: Para (for) cada posição (pos) em (in) num, mostre os valores
+
+
+
+
+
+
