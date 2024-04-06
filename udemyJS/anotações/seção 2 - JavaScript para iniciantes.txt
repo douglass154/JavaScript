@@ -1,5 +1,5 @@
 
-                                                             ==  13. VARIÁVEIS COM LET  ==
+                                                           ===  13. VARIÁVEIS COM LET  ===
 
 
 • Não podemos criar variáveis com palavras reservadas
@@ -13,7 +13,7 @@
 
 
 
-                                                         ==  14. CONSTANTES COM CONST  ==
+                                                       ===  14. CONSTANTES COM CONST  ===
 
 
 • Não podemos criar constantes com palavras reservadas
@@ -25,7 +25,7 @@
 
 
 
-                                                     ==  18. DIFERENÇAS ENTRE VAR E LET  ==
+                                                  ===  18. DIFERENÇAS ENTRE VAR E LET  ===
 
 
 --> 1ª Diferença:
@@ -35,7 +35,7 @@
 
 
 
-                                                      ==  19. TIPOS DE DADOS PRIMITIVOS  ==
+                                                  ===  19. TIPOS DE DADOS PRIMITIVOS  ===
 
 
 • String (textos que estiverem entre aspas dupla, simples ou craze)
@@ -57,7 +57,7 @@
 
 
 
-                                                        ==  24. MAIS SOBRE STRINGS  ==
+                                                     ===  24. MAIS SOBRE STRINGS  ===
 
 
 ==> Variável para os exemplos:
@@ -112,7 +112,7 @@ saiba mais sobre strings também em => https://developer.mozilla.org/pt-BR/docs/
 
 
 
-                                                        ==  26. MAIS SOBRE NUMBERS  ==
+                                                      ===  26. MAIS SOBRE NUMBERS  ===
 
 
 Comandos:
@@ -222,7 +222,7 @@ Saiba mais sobre o objeto Math => https://developer.mozilla.org/enUS/docs/Web/Ja
 
 
 
-                                                         === 29. ARRAYS (BÁSICO) ===
+                                                         ===  29. ARRAYS (BÁSICO) ===
 
 
 Uma variável composta/array/vetor é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação.
@@ -277,6 +277,43 @@ for (var pos in num) {
 Se lê dessa maneira: Para (for) cada posição (pos) em (in) num, mostre os valores
 
 
+
+                                           ===  33. VALORES PRIMITIVOS E POR REFERÊNCIA ===
+
+
+---> Valores Primitivos (imutáveis)
+• string
+• number
+• boolean
+• undefined
+• null
+• bigint
+• symbol
+
+• Valores primitivos são valores copiados
+
+
+---> Valores por Referência (mutáveis)
+• array
+• object
+• function
+
+Valores por referência são passados por referência
+
+
+
+                                  ===  39. FORMA DE ADICIONAR UM EVENTO PELO JAVASCRIPT  ===
+
+
+---> Para adicionar algum novo evento no javascript basta usar esse código:
+
+• var.addEventListener('nome do evento', nome da função que quer criar)
+
+
+---> Existe um código para evitar que eventos padrões do navegador aconteçam sem você querer. Primeiro digitamos o nome do parâmetro e logo depois adicionamos o código .preventDefaul
+
+exemplo:
+• parâmetro.preventDefault()
 
 
 
