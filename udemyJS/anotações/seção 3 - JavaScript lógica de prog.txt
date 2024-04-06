@@ -1,0 +1,12 @@
+
+                                                 ===  39. AVALIAÇÃO DE CURTO-CIRCUITO  ===
+
+
+Valores que são definidos como falsy:
+
+• false
+• 0
+• '' "" `` (qualquer tipo de string vazia)
+• null
+• undefined
+• NaN
