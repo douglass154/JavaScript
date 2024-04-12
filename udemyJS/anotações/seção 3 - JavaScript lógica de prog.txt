@@ -10,3 +10,132 @@ Valores que são definidos como falsy:
 • null
 • undefined
 • NaN
+
+
+
+                                                               ===  46. OBJETO DATE  ===
+
+
+Para se utilizar o objeto date, precisamos utilizar a palavra 'new' em seguida da função construtora 
+'Date()'
+
+Uma função construtora sempre começara com a primeira letra maiúscula
+
+
+
+Mais sobre o objeto date => 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+toLocaleDateString => 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+
+toLocaleString =>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+
+
+
+                                ===  46. OBJETO DATE (toLocaleString & toLocaleDateString)  ===
+
+
+toLocaleDateString () => 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+
+
+toLocaleString () =>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+
+
+Parâmetros de option em toLocaleString() e toLocaleDateString() => 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options
+
+
+
+                                     ===  50. ATRIBUIÇÃO VIA DESESTRUTURAÇÃO (ARRAYS)  ===
+
+
+A sintaxe de atribuição via desestruturação é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
+
+Se o array for criado com const, todas as atribuições feitas com tal array deverá também ser const, o mesmo serve para let
+
+
+==> Sintaxe:
+
+const numeros = [1, 2, 3, 4, 5, 6, 7];
+const [primeiroNumero, segundoNumero] = numeros;
+
+console.log(primeiroNumero);  // 1
+console.log(segundoNumero);  // 2
+
+
+
+---> Pegando o resto do array
+
+::: Para pegar o resto do array, basta adicionar 3 pontos (...) seguido do nome da variável que você quer pegar o resto, irei utilizar o exemplo acima como base.
+
+const numeros = [1, 2, 3, 4, 5, 6, 7];
+const [primeiroNumero, segundoNumero, ...resto] = numeros;
+
+console.log(primeiroNumero);  // 1
+console.log(segundoNumero);  // 2
+console.log(resto);  // [3, 4, 5, 6, 7]
+
+::: Neste exemplo a variável resto está recebendo o resto que sobrou do array.
+::: O operador (...) é chamado de rest ou spread, muda dependendo do contexto.
+
+
+
+                                   ===  50. ATRIBUIÇÃO VIA DESESTRUTURAÇÃO (MATRIZES)  ===
+
+
+A sintaxe de atribuição via desestruturação é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
+
+Se o array (Matriz) for criada com const, todas as atribuições feitas com tal array deverá também ser const, o mesmo serve para let
+
+
+==> Sintaxe:
+
+const numeros = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ];
+const [lista1, lista2, lista3] = numeros;
+
+console.log( lista3 [2] );  // 9
+console.log( lista1 [1] );  // 2
+
+
+
+                                    ===  51. ATRIBUIÇÃO VIA DESESTRUTURAÇÃO (OBJETOS)  ===
+
+
+A sintaxe de atribuição via desestruturação é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
+
+Se o objeto for criada com const, todas as atribuições feitas com tal objeto deverá também ser const, o mesmo serve para let
+
+
+==> Sintaxe:
+
+const pessoa = {
+  nome: 'Luiz',
+  sobrenome: 'Miranda',
+  idade: 30,
+  endereco: {
+    rua: 'Av. Brasil',
+    numero: 320
+  }
+};
+
+// Atribuição via desestruturação
+const { nome, sobrenome } = pessoa;
+console.log(nome);  // Luiz
+console.log(sobrenome);  // Miranda
+
+
+
+
+
+
+
+
+
+
+
+
+
