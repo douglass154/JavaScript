@@ -129,6 +129,102 @@ console.log(sobrenome);  // Miranda
 
 
 
+                                                   ===  54. DOM & A ÁRVORE DO DOM  ===
+
+
+Saiba mais sobre DOM => https://developer.mozilla.org/pt-BR/docs/Web/API/Document
+
+
+
+                                              ===  55. For in - ESTRUTURA DE REPETIÇÃO  ===
+
+
+A estrutura de repetição "for in" lê os índices de um array ou chaves de um objeto.
+
+
+==> Sintaxe Arrays:
+
+const frutas = [ 'Maçã', 'Pêra', 'Uva', 'Laranja' ];
+
+for (let i in frutas) {
+  console.log ( frutas[i] );
+}
+
+
+==> Sintaxe Objetos:
+
+const pessoa = {
+  nome: 'Luiz',
+  sobrenome: 'Otávio',
+  idade: 30
+}
+
+for (let chave in pessoa) {
+  console.log( pessoa[chave] );
+}
+
+
+---> For clássico - Geralmente com iteráveis (arrays ou strings);
+
+---> For in - Retorna o índice ou chave (string, array ou objetos);
+
+---> For of - Retorna o valor em sí (iteráveis, arrays ou strings);
+
+
+
+                                             ===  56. For of - ESTRUTURA DE REPETIÇÃO  ===
+
+
+O loop "for of" percorre, chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto. 
+
+O loop "for of" retorna o valor do Array ao invés do índice como o "for in", e não funciona para fazer loops com objetos.
+
+
+---> variável:
+• A cada iteração, um valor de uma propriedade diferente é atribuido à variável.
+
+---> iteravel:
+• Objeto cujos atributos serão iterados.
+
+
+==> Sintaxe:
+
+let iteravel = [10, 20, 30];
+
+for (let value of iteravel) {
+  console.log(value);
+}
+// 10
+// 20
+// 30
+
+
+---> For clássico - Geralmente com iteráveis (arrays ou strings);
+
+---> For in - Retorna o índice ou chave (string, array ou objetos);
+
+---> For of - Retorna o valor em sí (iteráveis, arrays ou strings);
+
+
+Saiba mais => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
+
+
+
+                                                           ===  59. BREAK & CONTINUE  ===
+
+
+Break e continue funcionam para todos os tipos de laço de repetição
+
+---> Break:
+• termina o loop atual e pula para a próxima instrução no script.
+
+---> Continue:
+• termina a iteração atual, salta, volta e executa a próxima iteração.
+
+
+Saiba mais => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/continue
+
+
 
 
 
