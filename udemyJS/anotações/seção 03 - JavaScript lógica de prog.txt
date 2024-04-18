@@ -226,6 +226,145 @@ Saiba mais => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/
 
 
 
+                              ===  63. TRATANDO & LANÇANDO ERROS (TRY, CATCH, THROW, FINALLY)  ===
+
+
+==> Try...catch
+
+As declarações try...catch marcam um bloco de declarações para testar (try), e especifica uma resposta, caso uma exceção seja lançada.
+
+
+==> Sintaxe
+
+try {
+
+} catch() {
+
+}
+
+
+A declaração try consiste em um bloco try, que contém uma ou mais declarações, e ao menos uma cláusula catch ou uma cláusula finally, ou ambas. Ou seja, há 3 formas de declarações try :
+
+1• try...catch
+2• try...finally
+3• try...catch...finally
+
+
+
+==> Finally
+
+A cláusula finally é executada após a excecução do bloco try e da(s) cláusula(s) catch porém antes das declarações seguintes ao try. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
+
+Você pode utilizar a cláusula finally para fazer seu script falhar graciosamente quando uma exceção ocorrer;
+
+
+
+==> Throw
+
+A declaração throw lança uma exceção definida pelo usuário. A execução da função atual vai parar (as instruções após o throw não serão executadas), e o controle será passado para o primeiro bloco catch na pilha de chamadas. Se nenhum bloco catch existe entre as funções "chamadoras", o programa vai terminar.
+
+
+==> Sintaxe:
+
+throw expressão;
+
+---> expressão
+• A expressão a ser lançada.
+
+
+
+Use a instrução throw para lançar uma exceção. Quando você lança uma exceção, expressão especifica o valor da exceção. Cada uma das intruções a seguir lança uma exceção:
+
+Exemplos:
+
+---> throw "Erro2"; // gera uma exceção com um valor string
+
+---> throw 42; // gera uma exceção com o valor 42
+
+---> throw true; // gera uma exceção com o valor true
+
+
+
+try, catch & finally => 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch
+
+throw => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/throw
+
+
+
+                                                    ===  65. SetInterval & SetTimeout  ===
+
+indicado é utilizar o setInterval() sempre que você queria que uma determinada função seja executada entre invervalos de tempo.
+E utilizar o setTimeout() quando você quiser executar um método depois de um determinado tempo.
+
+
+==> SetInteval
+o setInterval é executada em intervalos de tempo indefinidamente.
+
+exemplo:
+// Executa o evento a cada 10 segundos
+setInterval(() => console.log('setInterval'), 10000);
+
+
+
+==> SetTimeout
+A função setTimeout é executada apenas uma unica vez após um determinado tempo.
+
+exemplo:
+// Executa o evento depois de 5 segundos
+setTimeout(() => console.log('setTimeout'), 5000);
+
+
+
+                                               ===  67. CRIANDO UMA LISTA DE TAREFAS  ===
+
+
+==> Anotações importantes desta aula:
+
+---> Para continuar o foco do cursor em um local especifico, usar o objeto .focus
+
+
+
+::: Criar elementos HTML pelo JavaScript:
+---> Para criar um novo elemento HTML pelo JavaScript basta usar o códido .createElement('');
+---> E para adiciona-lo a um elemento pai basta utilizar o código .appendChild();
+
+
+
+::: Adicionar classes ou id's pelo JavaScript:
+---> Para criar uma nova classe em uma elemento HTML pelo JavaScript da para utilizar ambos os códigos;
+
+• var.classList.add('')  =  adicionar uma classe;
+• var.classList.remove('')  =  remover uma classe;
+
+• var.setAttribute('', '')  =  adicionar classe, id, etc, entre os parenteses primeiro vem o tipo (classe, id, etc), e depois o nome dessa classe/id, exemplo: var.setAttribute('class', 'nome-da-classe');
+
+
+
+::: Para selecionar o elemento pai de um elemento desejado:
+
+• var.parentElement()  =  seleciona o elemento pai de algum elemento desejado;
+• var.parentElement.remove()  =  Remove o elemento pai de algum elemento desejado (mas o elemento filho é eliminado junto);
+
+
+
+::: Código para manipular o texto de uma tag pelo JavaScript:
+• var.replace('', '')  =  entre os parenteses primeiro vem o Texto a ser manipulado, e depois o texto que você deseja colocar no lugar.
+
+Exemplo: var.replace("Vou trocar isso", "por isso");
+
+
+
+::: Salvar e pegar itens (e somente strings) no local storage :
+ • localStorage.setItem('', '')  =  Salva itens no Local Storage, entre os parenteses primeiro vem o nome que vai ser dado ao item guardado, depois vem a variável ou outra coisa que queira salvar no local storage;
+
+Exemplo: localStorage.setItem("nome do item", "minhaVariavel");
+
+• localStorage.getItem()  =  Pega os itens que foram salvos pelo localStorage.setItem, pelo nome dado ao item que foi guardado;
+
+Exemplo: localStorage.getItem("nome do item");
+
+
 
 
 
