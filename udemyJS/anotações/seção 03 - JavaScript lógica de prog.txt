@@ -349,14 +349,14 @@ setTimeout(() => console.log('setTimeout'), 5000);
 
 
 ::: Código para manipular o texto de uma tag pelo JavaScript:
-• var.replace('', '')  =  entre os parenteses primeiro vem o Texto a ser manipulado, e depois o texto que você deseja colocar no lugar.
+• var.replace('' '' , '' '')  =  entre os parenteses primeiro vem o Texto a ser manipulado, e depois o texto que você deseja colocar no lugar.
 
 Exemplo: var.replace("Vou trocar isso", "por isso");
 
 
 
 ::: Salvar e pegar itens (e somente strings) no local storage :
- • localStorage.setItem('', '')  =  Salva itens no Local Storage, entre os parenteses primeiro vem o nome que vai ser dado ao item guardado, depois vem a variável ou outra coisa que queira salvar no local storage;
+ • localStorage.setItem('' '' , '' '')  =  Salva itens no Local Storage, entre os parenteses primeiro vem o nome que vai ser dado ao item guardado, depois vem a variável ou outra coisa que queira salvar no local storage;
 
 Exemplo: localStorage.setItem("nome do item", "minhaVariavel");
 
