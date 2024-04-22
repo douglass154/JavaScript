@@ -1,0 +1,158 @@
+
+                                              _______________________________________
+                                              ===  81. REVISÃO DO BÁSICO EM ARRAYS  ===
+                                              -----------------------------------------------------------------------
+
+Arrays, objetos e funções são valores passados por referência:
+
+---> Valores por Referência (mutáveis)
+• array
+• object
+• function
+
+::: Para obter os valores de um vetor para uma outra variável, sem alterar o array original, pode-se utilizar o operador spread (espalhamento) (...);
+
+exemplo:
+
+// Objeto original
+const pessoa = { nome: "Maria", idade: 30 };
+
+// Clonando o objeto
+const clonePessoa = { ...pessoa };
+
+// Modificando a propriedade do clone
+clonePessoa.idade = 35;
+
+console.log(pessoa.idade); // Saída: 30
+console.log(clonePessoa.idade); // Saída: 35
+
+
+Mais informações sobre atribuições por referência =>
+https://dev.to/cristuker/javascript-atribuicao-por-referencia-528f
+
+___________________
+----------------------------------
+Comandos para arrays:
+
+---> var.indexOf()
+• Retorna o número da chave onde o valor definido entre os parênteses se encontra.
+
+
+---> var.join("separador")
+• Retorna um array como uma string e não altera o array original.
+::: Qualquer separador pode ser especificado. O padrão é vírgula (,).
+
+
+---> var.length
+• Mostra o tamanho total que o vetor possui (também);
+
+
+---> var.pop()
+• Remove um elemento no final do vetor e retorna o elemento deslocado;
+
+
+---> var.push()
+• Cria um novo elemento no final do vetor e acrescenta um valor a ele (definido entre os parênteses).
+
+
+---> var.sort() 
+• Alinha todos os elementos do array em ordem crescente.
+
+
+---> var.unshift()
+• Cria um novo elemento no início do vetor e acrescenta um valor a ele (definido entre os parênteses).
+
+
+---> var.shift()
+• Remove o primeiro item de um array, altera o array original e retorna o elemento deslocado.
+
+
+---> var.split("separador")
+• Divide uma string em um array de substrings, retorna o novo array, e não altera a string original (Usado para strings);
+
+• O separador irá recortar oque você colocar dentro dele, exemplo, se você colocar a letra "a" dentro do separador, todas as letras "a" da string serão recortadas e retornará um novo array com vírgulas no lugar da letra "a";
+::: Se ("  ") for usado como separador, a string será dividida entre palavras.
+
+
+---> var.slice(0 , 3)
+• Vai recortar os elementos escolhidos pelos índices entre os parênteses.
+
+Exemplo:
+::: Se colocar para recortar entre os indíces 0 e 3, vai recortar até o elemento 2, pois o índice três não vai ser incluido no recorte, é possível colocar valores positivos e negativos.
+
+:: Se colocar entre os parênteses (0, -1), vai recortar do final para o começo de um em um número ou letra (bom para calculadoras, etc).
+
+_________________________________
+------------------------------------------------------------
+==> Estruturas de repetição para arrays
+
+Uma maneira de simplificar o código para os arrays é com essa estrutura de repetição abaixo, ele é um for mais simplificado e é otimizado para variáveis compostas e objetos:
+
+Sintaxe:
+
+for (var pos in num) {
+         console.log ( num[pos] )
+}
+
+
+                                                     _________________________
+                                                     ===  82. MÉTODO SPLICE  ===
+                                                     ----------------------------------------------
+
+
+O método splice() permite alterar o conteúdo do seu array removendo ou substituindo elementos existentes por novos elementos.
+
+Esse método modifica o array original e retorna os elementos removidos como um novo array.
+
+---> sintaxe:
+
+Array.splice(índice, delete, addElem1, addElem2, addElem3, ...);
+
+______________
+-------------------------
+exemplo de uso:
+
+let meses = ["Janeiro", "Fevereiro", "Segunda", "Terça"];
+let dias = meses.splice(2, 1);
+
+console.log(dias);  // ["Segunda"]
+console.log(meses);  // ["Janeiro", "Fevereiro", "Terça"]
+
+________________
+-----------------------------
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_splice.asp
+https://www.freecodecamp.org/portuguese/news/splice-em-javascript-como-usar-o-metodo-de-array-splice-em-js/
+
+
+
+                                                __________________________________
+                                                ===  83. CONCATENCANDO ARRAYS  ===
+                                                --------------------------------------------------------------
+
+
+=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

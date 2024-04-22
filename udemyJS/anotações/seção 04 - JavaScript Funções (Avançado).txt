@@ -1,6 +1,6 @@
-
+                      _______________________________________________________________
                       ===  68. AS VÁRIAS MANEIRAS DE DECLARAR FUNÇÕES EM JAVASCRIPT  ===
-
+                      --------------------------------------------------------------------------------------------------------------------
 
 ---> As funções são first-class objects (objetos de primeira classe);
 Obs: todas as funções são tratadas como objetos de primeira classe;
@@ -64,9 +64,9 @@ const objeto = {
 ::: Desta maneira acima, estamos chamando a função de dentro do objeto
 
 
-
+                                                   _________________________________
                                                    ===  69. PARÂMETROS DA FUNÇÃO  ===
-
+                                                   -------------------------------------------------------------
 
 ::: Se em uma chamada de função for enviado algum parametro para a função, mas na função não existir nenhum parâmetro para receber;
 
@@ -107,9 +107,9 @@ minhaFuncao(1, 2, 3, 4, 5);
 ---> O rest operator (...) pode substituir a variável arguments em uma função, e funciona para qualquer tipo de função, seja ela normal ou arrow.
 
 
-
+                                                           _________________________
                                                            ===  71. ESCOPO LÉXICO  ===
-
+                                                           ----------------------------------------------
 
 Escopo léxico basicamente é um reconhecimento que sua função faz primeiramente dentro dela e depois nos escopos "pais", por último sendo o escopo global.
 
@@ -118,9 +118,9 @@ Mais sobre => https://www.treinaweb.com.br/blog/contexto-e-escopo-no-javascript
 Mais sobre => https://devolopingtheworld.hashnode.dev/roadmap-backend-8-escopo-lexico
 
 
-
+                                                             _____________________
                                                              ===  72. CLOSURES  ===
-
+                                                             --------------------------------------
 
 ::: Uma closure é a combinação de uma função com as referências ao estado que a circunda (o ambiente léxico). 
 
@@ -132,9 +132,9 @@ Mais sobre => https://devolopingtheworld.hashnode.dev/roadmap-backend-8-escopo-l
 Mais detalhes => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Closures
 
 
-
+                                                       ________________________________
                                                        ===  73. FUNÇÕES DE CALLBACK  ===
-
+                                                       ----------------------------------------------------------
 
 ::: Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação.
 
@@ -155,9 +155,9 @@ processUserInput(saudacoes);
 Mais detalhes => https://www.freecodecamp.org/portuguese/news/funcoes-de-callback-em-javascript-o-que-sao-e-como-usa-las/
 
 
-
+                                                     __________________________________
                                                      ===  74. FUNÇÕES IMEDIATAS (IIFE)  ===
-
+                                                     --------------------------------------------------------------
 
 ::: IIFE -> Imemediately invoked function expression;
 
@@ -175,7 +175,6 @@ Mais detalhes => https://www.freecodecamp.org/portuguese/news/funcoes-de-callbac
 :::  Por meio da qual o interpretador JavaScript avaliará e executará a função.
 
 
-
 ==> Exemplo:
 ::: A função se torna uma expressão que é imediatamente executada. A variável definida dentro da expressão não pode ser acessada fora de seu escopo.
 
@@ -189,11 +188,14 @@ console.log(nome);  // gerará o erro "Uncaught ReferenceError: nome is not defi
 Mais detalhes => https://developer.mozilla.org/pt-BR/docs/Glossary/IIFE
 
 
-
+                                      _______________________________________________
                                       ===  75. FUNÇÕES FÁBRICA (FACTORY FUNCTIONS)  ===
-
+                                      --------------------------------------------------------------------------------------
 
 As Factorys functions é uma função que retorna um objeto, é uma técnica que permite criar objetos de forma eficiente e flexível, tornando o código mais organizado e fácil de manter.
+
+Dentro das factorys functions, se tem os "atributos" e os "métodos".
+::: Métodos são funcões criadas como objetos, e atributos são os objetos convencionais.
 
 
 
@@ -260,9 +262,9 @@ Mais detalhes (Setter) =>
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/set
 
 
-
+                                      _____________________________________________
                                       ===  76. PRATICANDO COM FACTORY FUNCTIONS  ===
-
+                                      ----------------------------------------------------------------------------------
 
 Notas da aula :
 
@@ -305,26 +307,135 @@ Mais detalhes =>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_direct_eval!
 
 
-
+                           _________________________________________________________
                            ===  77. FUNÇÕES CONSTRUTORAS (CONSTRUCTOR FUNCTIONS)  ===
+                           --------------------------------------------------------------------------------------------------------
+
+::: As funções construtoras são a base da orientação a objetos em JavaScript, possibilitando a criação de objetos personalizados, organização de código e facilitando a reutilização.
+
+::: Ela pode ser executada como uma função ou pode ser utilizada para instanciar um objeto utilizando a palavra reservada "new".
+
+::: O operador "new" cria uma instancia de um tipo de objeto definido pelo usuário ou de um dos tipos nativos que possuem uma função construtora.
 
 
-=
+==> exemplo de uso:
+
+function Carro(marca, modelo, ano) {
+  this.marca = marca;
+  this.modelo = modelo;
+  this.ano = ano;
+}
+
+const car1 = new Carro('Audi', 'R8', 2018);
+
+console.log(car1.marca);
+// Expected output: "Audi"
 
 
 
+::: Nas funções contrutoras, sempre iremos colocar a primeira letra do nome da função em MAIÚSCULA;
+
+Dentro das constructor functions, se tem os "atributos" e os "métodos". 
+::: Métodos são funcões criadas como objetos, e atributos são os objetos convencionais.
 
 
 
+Mais detalhes (constructor functions) =>
+https://medium.com/@viniazvd/classes-vs-fun%C3%A7%C3%B5es-construtoras-vs-fun%C3%A7%C3%B5es-f%C3%A1brica-b92a6afa70a4
+
+Mais detalhes (new operator) =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/new
 
 
+                                                _______________________________
+                                                ===  79. FUNÇÕES RECURSIVAS  ===
+                                                ---------------------------------------------------------
+
+Uma função recursiva é uma função que chama a si mesma até encontrar uma instrução de parar. Essa técnica é chamada de recursão.
 
 
+exemplo:
+
+::: Suponha que você tenha uma função chamada recurse(). Ela será uma função recursiva caso ela mesma se invoque dentro do seu escopo, dessa forma:
 
 
+function recurse() {
+    recurse();
+}
 
 
+::: Uma função recursiva sempre precisa ter uma condição que vai parar de invocar ela mesma, caso contrário ela se chamará infinitamente.
 
+
+function recurse() {
+    if(condição) {
+        return; 
+    } else {
+        recurse();    
+    }
+}
+
+
+::: Geralmente, as funções recursivas são usadas para dividir um grande problema em problemas menores.
+
+
+Mais detalhes =>
+https://ricardo-reis.medium.com/fun%C3%A7%C3%B5es-recursivas-no-javascript-13a1fc099c9f
+
+
+                                                    _______________________________
+                                                    ===  80. FUNÇÕES GERADORAS  ===
+                                                    ---------------------------------------------------------
+
+A declaração function* (palavra chave function seguida de um asterisco) define uma função geradora (generator function), que retorna um objeto Generator.
+
+::: O * informa ao JavaScript que esta é uma função geradora.
+
+::: Para chamarmos a função precisamos chamar o "next", exemplo:
+
+
+function* firstGenerator(range){ 
+    let i = 0;
+    while(i < range) { 
+        i+= 1;
+        yield i;
+    };
+};
+
+let iterator = firstGenerator(3);
+iterator  // Object [Generator] {}
+iterator.next()  // { value: 1, done: false }       
+iterator.next()  // { value: 2, done: false }       
+iterator.next()  // { value: 3, done: false }       
+iterator.next()  // { value: undefined, done: true }
+
+
+Cada vez que chamamos o next, nossa função executará o código até encontrar uma declaração de rendimento (yield). Quando encontramos uma declaração de rendimento, interromperemos a execução até que a próxima seja chamada novamente.
+
+::: Se quisermos obter apenas o valor da função basta utilizar  ''exemplo.next().value''
+
+
+==> Sintaxe:
+
+function* name(param, param, ...param) {
+   statements
+}
+
+---> name:
+• O nome da função.
+
+---> param:
+O nome do argumento que será passado á função. Uma função pode ter até 255 argumentos.
+
+---> statements:
+As instruções que formam o corpo da função.
+
+
+Mais detalhes =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/function*
+https://medium.com/@onezino.moreira/fun%C3%A7%C3%B5es-geradoras-em-javascript-1555ba465cae
+https://www.digitalocean.com/community/tutorials/understanding-generators-in-javascript-pt
+https://dev.to/kurybr/entendendo-javascript-generators-em-3-minutos-235m
 
 
 

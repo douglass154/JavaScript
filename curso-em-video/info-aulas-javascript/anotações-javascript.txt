@@ -57,7 +57,7 @@ Sintaxe:
 
 
 
-                                                           ===  VARIÁVEIS JAVASCRIPT  ===
+                                                       ===  VARIÁVEIS JAVASCRIPT  ===
 
 
 Uma variável representa um contêiner ou espaço na memória física ou virtual de um computador, onde diferentes tipos de dados (valores) são armazenados durante a execução de um programa. A cada variável é atribuído um nome descritivo ou identificador que se refere ao valor salvo. Os dados armazenados podem mudar de valor ou serem constantes.
