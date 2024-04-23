@@ -131,22 +131,274 @@ https://www.freecodecamp.org/portuguese/news/splice-em-javascript-como-usar-o-me
                                                 --------------------------------------------------------------
 
 
-=
+A concatenação de arrays e strings pode ser feito por meio da função concat(), que tem como propósito unir (concatenar) objetos do tipo String ou Array.
+
+Quando utilizamos esse método, o primeiro parâmetro é concatenado ao valor original (objeto str a partir do qual o método é invocado). O segundo parâmetro é, então, concatenado ao resultado da operação anterior e assim por diante. Exemplo:
+
+var a = "Meu nome é ";
+var b = "Tiago!";
+var c = a.concat(b);
+
+console.log(c)  // Meu nome é Tiago!
+
+__________________________
+-----------------------------------------------
+Também podemos fazer a utilização do operador spread (...) para concatenar strings e arrays. Exemplo:
+
+const a1 = [1, 2, 3];
+const a2 = [4, 5, 6];
+const a3 = [...a1, ...a2, ...[7, 8, 9]];
+
+console.log(a3);  // [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+
+_______________________
+------------------------------------------
+Mais detalhes => 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964
+https://www.w3schools.com/jsref/jsref_concat_array.asp
 
 
 
+                                                ____________________________________
+                                                ===  84. FILTER - FILTRANDO ARRAYS  ===
+                                                ------------------------------------------------------------------
+
+
+O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida. E sempre vai retornar um novo array com a mesma quantidade de elementos ou menos (já que é um filtro);
+
+Sintaxe:
+var array2 = array1.filter(função callback(valor, índice, array) {} )
+
+
+Parâmetros:
+
+---> Função callback ou Função anônima:
+::: Função para testar cada elemento do array. Retorna true para manter o valor do array, e false caso contrário, recebendo três argumentos:
+
+• Valor:
+::: O elemento que está sendo processado no array.
+
+• Índice:
+::: O índice do elemento atual que está sendo processado no array.
+
+• Array:
+::: O array para qual o filter foi chamado.
+
+__________________
+---------------------------------
+==> Exemplo de uso com função de callback:
+
+const ages = [32, 33, 16, 40];
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+};
+
+console.log(result);  // 32, 33, 40
+
+
+==> Exemplo de uso com função anônima:
+
+const numeros = [5, 50, 80, 1, 2, 3, 4, 5, 8, 7, 11, 15, 22, 27];
+const numerosMaioresQue10 = numeros.filter((valor) => valor > 10);
+
+console.log(numerosMaioresQue10);  // 50, 80, 11, 15, 22, 27;
+
+_______________________
+------------------------------------------
+Mais detalhes =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+https://www.w3schools.com/jsref/jsref_filter.asp
+
+Mais detalhes (map, filter e reduce) =>
+https://www.alura.com.br/artigos/manipulacao-de-array-com-map-filter-e-reduce?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=aud-1188215190880:dsa-2273097816642&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQjwlZixBhCoARIsAIC745DW6WFNMUPc5gcaZGPQUYTaxzIiu0tzkzax0sJIhJWWmw_6AebxDFQaAvYkEALw_wcB
 
 
 
+                                                 __________________________________
+                                                 ===  85. MAP - MAPEANDO O ARRAY  ===
+                                                 ---------------------------------------------------------------
+
+
+Com o método "map()" é possível percorrer todos os item do array, executar alguma transformação nesses itens e retornar um novo array sem modificar o atual.
+
+O método map() retorna um valor exatamente do mesmo tamanho do array original mas com os valores alterados
+
+
+Sintaxe:
+var array2 = array1.map(função callback(valor, índice, array) {} )
+
+
+Parâmetros:
+
+---> Função callback ou Função anônima:
+::: Função para testar cada elemento do array. Retorna um valor diferente do array orignal mas sem alterá-lo, recebendo três argumentos:
+
+• Valor:
+::: O elemento que está sendo processado no array.
+
+• Índice:
+::: O índice do elemento atual que está sendo processado no array.
+
+• Array:
+::: O array para qual o filter foi chamado.
+
+______________________
+----------------------------------------
+Exemplo de uso:
+
+const numeros = [5, 50, 80, 1, 2, 3, 4, 5, 8, 7, 11, 15, 22, 27];
+const numerosEmDobro = numeros.map((valor) => valor * 2);
+
+console.log(numerosEmDobro);  // 10, 100, 160, 2, 4, 6, ...
+
+______________________
+----------------------------------------
+Mais detalhes =>
+https://www.devmedia.com.br/javascript-map-mapeando-elementos-de-um-array/40648
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+https://www.w3schools.com/jsref/jsref_map.asp
+
+Mais detalhes (map, filter e reduce) =>
+https://www.alura.com.br/artigos/manipulacao-de-array-com-map-filter-e-reduce?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=aud-1188215190880:dsa-2273097816642&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQjwlZixBhCoARIsAIC745DW6WFNMUPc5gcaZGPQUYTaxzIiu0tzkzax0sJIhJWWmw_6AebxDFQaAvYkEALw_wcB
 
 
 
+                                               _____________________________________
+                                               ===  86. REDUCE - REDUZINDO ARRAYS  ===
+                                               --------------------------------------------------------------------
+
+
+O método reduce() executa uma função redutora (fornecida por você) para cada elemento do array, resultando num único valor de retorno.
+
+O método reduce() retorna um único valor: o resultado acumulado da função, e não altera o array original.
+
+
+==> Observação:
+
+::: No primeiro retorno de chamada, não há valor de retorno do retorno de chamada anterior.
+
+::: Normalmente, o elemento 0 da matriz é usado como valor inicial e a iteração começa a partir do elemento 1 da matriz.
+
+::: Se um valor inicial for fornecido, ele será usado e a iteração começará no elemento 0 da matriz.
+
+___________________________________
+----------------------------------------------------------------
+
+A função reducer recebe quatro parâmetros:
+
+• Acumulador:
+::: É o valor inicial (ou o valor do callback anterior). Este valor inicia com o valorInicial e será retornado na última iteração.
+
+==> valor Inicial:
+::: Opcional. Valor a ser usado como o primeiro argumento da primeira chamada da função callback.
+
+• Valor:
+::: O elemento que está sendo processado no array.
+
+• Índice:
+::: O índice do elemento atual que está sendo processado no array.
+
+• Array:
+::: O array para qual o filter foi chamado.
+
+
+Sintaxe:
+const numeros = [5, 50, 80, 1, 2, 3, 4, 5, 8, 7, 11, 15, 22, 27];
+const somaNumeros = numeros.reduce(function (acumulador, valor, indice, array) {});
+
+_________________
+-------------------------------
+Mais sobre =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+https://www.devmedia.com.br/javascript-reduce-reduzindo-uma-colecao-em-um-unico-objeto/37981
+https://www.w3schools.com/jsref/jsref_reduce.asp
+https://www.freecodecamp.org/portuguese/news/um-guia-para-o-metodo-reduce-em-javascript/
 
 
 
+                                                    ________________________________                                                                                                   ===  87. FILTER + MAP + REDUCE  ===
+                                                    -----------------------------------------------------------
+
+
+Exemplo para poder utilizar todos os métodos unidos:
+
+const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
+const numerosModificados = numeros.filter(valores => {
+    if (valores % 2 === 0) return valores;   
+
+}).map(valores => {
+    return valores * 2;
+
+}).reduce((acumulador, valores) => acumulador += valores , 0);
+
+console.log(numerosModificados);
+
+//  Pares -> [ 50, 80, 2, 8, 22 ];
+//  Valores dobrados -> [ 100, 160, 4, 16, 44 ];
+//  Valores dobrados somados -> 324
+
+
+_________________________________
+------------------------------------------------------------
+Forma reduzida do exemplo acima:
+
+const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
+const numerosModificados = numeros
+    .filter(valores => valores % 2 === 0)
+    .map(valores => valores * 2)
+    .reduce((acumulador, valores) => acumulador += valores , 0);
+
+console.log(numerosModificados);
+
+//  Pares -> [ 50, 80, 2, 8, 22 ];
+//  Valores dobrados -> [ 100, 160, 4, 16, 44 ];
+//  Valores dobrados somados -> 324
 
 
 
+                                                                 __________________
+                                                                 ===  88. forEach  ===
+                                                                 ---------------------------------
+
+
+O método forEach() chama uma função para cada elemento de um array. Não é executado para elementos vazios.
+
+
+Sintaxe:
+
+array.forEach(function(valor, indice, arrayCompleto) {
+    // códigos
+}, thisArg);
+
+Parâmetros:
+
+---> function:
+::: Função para executar em cada elemento, recebendo três argumentos:
+
+• valor:
+::: O valor atual do elemento sendo processado no array.
+
+• índice (opcional):
+::: O índice do elemento atual sendo processado no array.
+
+• array (opcional):
+::: O array que forEach() está sendo aplicado.
+
+
+---> thisArg (opcional):
+::: Opcional. Valor a ser usado como this quando executar callback.
+
+
+____________________________
+---------------------------------------------------
+Mais detalhes =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+https://www.devmedia.com.br/javascript-foreach-executando-uma-funcao-para-cada-elemento-de-um-array/39808
+https://www.w3schools.com/jsref/jsref_foreach.asp
+https://www.freecodecamp.org/portuguese/news/foreach-em-javascript-como-percorrer-um-array-em-js/
 
 
 
