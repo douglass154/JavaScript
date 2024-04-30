@@ -17,7 +17,7 @@ function criaCulculadora() {
                 const elemento = event.target;
 
                 if (elemento.classList.contains('btn-num')) {
-                    // calculador.btnParaDisplay()
+                    // calculadora.btnParaDisplay()
                     this.btnParaDisplay(elemento.innerText);
                 };
 

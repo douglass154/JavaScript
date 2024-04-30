@@ -1,0 +1,21 @@
+
+                                                             ===  sites para DOM  ===
+
+https://bognarjunior.wordpress.com/2014/12/11/mouse-events-javascript-dom/
+
+
+
+                                                     ===  EXPRESSÕES REGULARES  ===
+
+
+---> /\D+/g
+Essa expressão é uma representação númerica que representa qualquer coisa que não for um número. Então tudo que não for um número, vai ser pego nessa expressão regular;
+
+
+
+                                                             ===  USO DO THIS  ===
+
+
+https://desenvolvimentoparaweb.com/javascript/this-javascript-dominando/
+https://www.dio.me/articles/o-que-e-this-em-javascript
+https://ricardo-reis.medium.com/entendendo-o-this-5876c3009aaf

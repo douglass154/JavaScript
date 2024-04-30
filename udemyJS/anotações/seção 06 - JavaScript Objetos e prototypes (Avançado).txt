@@ -1,0 +1,436 @@
+
+                                                        _____________________________
+                                                        ===  89. REVISANDO OBJETOS  ===
+                                                        ------------------------------------------------------
+
+
+Um objeto é formado por um par  -->  chave e valor
+exemplo:
+
+const pessoa = {
+    nome: "Luiz",
+    sobrenome: "Silva"
+
+    // nome é a chave;   sobrenome é a chave;
+    // "Luiz" é o valor;   "Silva" é o valor;
+};
+
+
+Para declarar objetos podemos utilizar tanto a forma construtora, quanto a forma literal.
+
+forma construtora: const objeto1 = new Object();
+forma literal: const objeto2 = {};
+
+
+Para acessar os valores de dentro desse objeto, podemos utilizar anotação de ponto, exemplo:
+
+console.log(pessoa.nome);  // Luiz;
+console.log(pessoa.sobrenome);  // Silva;
+
+
+Também podemos utilizar anotação de colchetes para acessar os valores de dentro desse objeto, exemplo:
+
+console.log(pessoa[ 'nome' ]);  // Luiz;
+console.log(pessoa[ 'sobrenome' ]);  // Silva;
+
+_________________________
+---------------------------------------------
+
+Nas funções construtoras, exite um método chamado Object.freeze();
+Ele congela o objeto para não poder ser manipulado fora da função construtora;
+
+exemplo:
+
+function Pessoa(nome, sobrenome) {
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+
+    this.apresentacao = () => {
+        return `Olá ${this.nome} ${this.sobrenome}`
+    }
+
+    // Congela o objeto para não poder ser manipulado fora da função construtora;
+    Object.freeze(this);
+}
+
+Mais detalhes =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+
+
+
+                                                      _______________________________
+                                                      ===  90. Object.defineProperty()  ===
+                                                      ---------------------------------------------------------
+
+
+O método Object.defineProperty() define uma nova propriedade diretamente em um objeto, ou modifica uma propriedade já existente em um objeto, e retorna o objeto.
+
+::: Nota: Você invoca este método diretamente no construtor do Object ao invés de invocar em uma instância do tipo Object.
+
+________________
+-----------------------------
+Sintaxe:
+• Object.defineProperty(object, property, descriptor);
+
+
+Parâmetros:
+
+---> object:
+• O objeto no qual será definida a propriedade.
+
+---> property:
+• O nome da propriedade que será definida ou modificada.
+
+---> descriptor:
+• O descritor para a propriedade que será definida ou modificada. Descritores têm as seguintes chaves:
+
+::: configurable:
+true somente se os descritores da propriedade puderem ser modificados e se a propriedade puder ser apagada do objeto correspondente. Valor padrão é false.
+
+::: enumerable:
+true significa que a propriedade será listada quando tentarmos exibir as chaves do objeto correspondente(console.log(), for in, etc...). Valor padrão é false.
+
+::: value:
+O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc). Valor padrão é undefined.
+
+::: writable:
+true significa que o valor associado com a propriedade poderá ser modificado/alterado. Valor padrão é false.
+
+
+______________________________
+------------------------------------------------------
+Mais detalhes (Object.defineProperty()) =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+
+https://medium.com/@kamresh485/mastering-javascript-object-defineproperty-a-comprehensive-guide-with-coding-examples-f3ed633f2bfa
+
+
+
+                                                     _________________________________
+                                                     ===  90. Object.defineProperties()  ===
+                                                     ------------------------------------------------------------
+
+
+O método Object.defineProperties() define uma nova propriedade ou modifica uma existente no objeto, retornando o objeto.
+
+Sintaxe:
+Object.defineProperty(object, property);
+
+
+Parâmetros:
+---> object:
+• O objeto no qual se cria ou modifica suas propriedades.
+
+---> property:
+• Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem        definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois        principais tipos: descritores de dados e de acesso. Descritores têm as seguintes chaves:
+
+
+::: configurable:
+true somente se os descritores da propriedade puderem ser modificados e se a propriedade puder ser apagada do objeto correspondente. Valor padrão é false.
+
+::: enumerable:
+true somente se quiser que esta propriedade apareça durante enumerações (console.log(), for in, etc...) das propriedade sobre o objeto correspondente. Valor padrão é false.
+
+::: value:
+O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc). Valor padrão é undefined.
+
+::: writable:
+true somente se o valor associado com a propriedade puder ser modificado. Valor padrão é false.
+
+
+Exemplo de uso:
+
+var obj = {};
+Object.defineProperties(obj, {
+    property1: {
+        value: true,
+        writable: true,
+    },
+    property2: {
+        value: 'Hello',
+        writable: false,
+    },
+    // etc. etc.
+});
+
+_______________________
+------------------------------------------
+Mais detalhes (Object.defineProperties()) =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+
+https://www.w3schools.com/jsref/jsref_object_defineproperties.asp
+https://www.programiz.com/javascript/library/object/defineProperties
+https://www.geeksforgeeks.org/javascript-object-defineproperties-method/
+
+
+
+                            __________________________________________________________
+                            ===  91. Getters e Setters em Object.defineProperty e Properties  ===
+                            ----------------------------------------------------------------------------------------------------------
+
+
+Quando usarmos os Descritores get e set, não precisaremos dos descritores "value" e "writable", por que já utilizaremos as funções getter e setter para trabalhar em cima do valor, tanto para setar, quanto para obter o valor.
+
+
+
+::: get:
+Uma função a qual serve como um getter para obter o valor da propriedade e modificar se necessário, ou undefined se não existir getter. O retorno da função será usado como o valor da propriedade.
+
+::: set:
+Uma função a qual serve como um setter, para setar o valor da propriedade, podendo validar ou modificar o valor, ou undefined se não existir setter. A função receberá como argumento somente o novo valor sendo atribuído à propriedade.
+
+
+
+                                       ______________________________________
+                                       ===  92. MÉTODOS ÚTEIS PARA OBJETOS  ===
+                                       ----------------------------------------------------------------------
+
+
+________________________
+
+---> Spread operator (...) :
+Permite uma concatenação concisa e limpa de arrays, clonagem de arrays e objetos, mesclagem de objetos, criação dinâmica de argumentos de função, clonagem de objetos e arrays aninhados complexos e muito mais.
+
+
+Mais detalhes =>
+https://www.w3schools.com/react/react_es6_spread.asp#:~:text=The%20JavaScript%20spread%20operator%20(%20..,into%20another%20array%20or%20object.
+
+_______________________
+
+---> Objetct.assign() :
+O método Object.assign() copia propriedades de um ou mais objetos de origem para um objeto de destino.
+
+::: Sintaxe:
+Object.assign(target: {}, source(s))
+
+• target -> Obrigatório. Um objeto existente ou um novo objeto vázio.
+• source -> Obrigatório. Um ou mais objetos para copiar as propriedades de origem, para o objeto do        target.
+
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_object_assign.asp
+
+_______________________
+
+---> Object.freeze() :
+O método freeze() evita qualquer alteração em um objeto. Nenhuma modificação, adição ou exclusão de propriedades é permitida.
+
+Como os arrays são objetos, os arrays também podem ser congelados:
+
+::: Sintaxe:
+Object.freeze(object)
+
+
+Mais detalhes =>
+https://www.w3schools.com/js/js_object_protection.asp#:~:text=freeze()-,The%20Object.,deletion%20of%20properties%20are%20allowed.
+
+______________________
+
+---> Object.isFrozen() :
+O método Object.isFrozen() pode ser usado para verificar se um objeto está congelado. Retorna verdadeiro se um objeto estiver congelado, caso contrário retorna false.
+
+::: Sintaxe:
+Object.isFrozen(object)
+
+Mais detalhes => 
+https://www.w3schools.com/js/js_object_protection.asp#:~:text=freeze()-,The%20Object.,deletion%20of%20properties%20are%20allowed.
+
+______________________
+
+
+---> Object.keys() :
+O método Object.keys() retorna um array com as chaves do objeto, o método não altera o objeto original.
+
+::: Sintaxe:
+Object.keys(object)
+
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_object_keys.asp
+
+_______________________
+
+---> Object.value() :
+O método Object.values() retorna uma matriz dos valores das propriedades de um objeto, o método não altera o objeto original.
+
+::: Sintaxe:
+Object.values(object)
+
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_object_values.asp
+
+_______________________
+
+---> Object.entries() :
+O método Object.entries() retorna uma matriz dos pares chave/valor de um objeto, o método não altera o objeto original.
+
+::: Sintaxe:
+Object.entries(object)
+
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_object_entries.asp
+
+_______________________
+
+---> Object.create() :
+O método Object.create() cria um objeto a partir de um objeto existente.
+
+::: Sintaxe:
+Object.create(object, properties)
+
+::: Parâmetros:
+• object
+Obrigatório, um objeto existente.
+
+• properties
+Opcional, um descritor de propriedades a serem adicionadas ou alteradas.
+
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_object_create.asp
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create
+
+_______________________
+
+
+---> Object.getOwnPropertyDescriptor() :
+O método Object.getOwnPropertyDescriptor() retorna os descritores de propriedades de um objeto, e não altera o objeto original.
+
+::: Sintaxe:
+Object.getOwnPropertyDescriptor(obj, prop)
+
+::: Parâmetros:
+• obj
+O objeto no qual deve-se procurar pela propriedade.
+
+• prop
+O nome da propriedade cujo os descritores são para serem retornados.
+
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_object_getownpropertydescriptor.asp
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
+
+_______________________
+
+---> Object.getPrototypeOf() :
+O método Object.getPrototypeOf() retorna o prototype (isto é, o valor da propriedade interna) do objeto especificado.
+
+::: Sintaxe:
+Object.getPrototypeOf(obj)
+
+::: Parâmetros:
+• obj
+O objeto cujo prototype será retornado.
+
+
+Mais detalhes =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+
+_______________________
+
+
+
+                                                           _______________________
+                                                           ===  93. PROTOTYPES  ===
+                                                           ------------------------------------------
+
+
+O JavaScript é baseado em protótipos para passar propriedades e métodos de um objeto para outro.
+
+Protótipo é o termo usado para se referir ao que foi criado pela primeira vez, servindo de modelo ou molde para futuras produções.
+
+
+---> No video, foi usado fora da constructor function, assim:
+• Pessoa.prototype.nomeCompleto = function() { ... }
+
+---> Mas da pra usar dentro da constructor function, assim:
+• this.__proto__.nomeCompleto = function() { ... }
+
+::: Ambos tem o mesmo resultado, mas existe alguma diferença entre elas?
+Resposta: Sim;
+
+Não use __proto__... da uma lida aqui, as primeiras linhas detalham isso: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
+
+
+
+                                                          _____________________
+                                                          ===  95. HERANÇAS  ===
+                                                          --------------------------------------
+
+
+Quando se trata de herança, o JavaScript tem somente um construtor: objetos. Cada objeto tem um link interno para um outro objeto chamado prototype. Esse objeto prototype também tem um atributo prototype, e assim por diante até o que o valor null seja encontrado como sendo o seu prototype. null que, por definição, não tem prototype, e age como um link final nesta cadeia de protótipos
+
+Mais detalhes sobre heranças =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+
+_______________________
+
+Um dos métodos utilizados para de trabalhar com heranças é o método JavaScript call();
+
+::: O método call() pode ser usado para invocar (chamar) um método com um objeto proprietário como     argumento (parâmetro).
+::: Com call(), um objeto pode usar um método pertencente a outro objeto.
+
+
+Este exemplo chama o método fullName de person, usando-o em person1 :
+
+Exemplo:
+const person = {
+    fullName: function (city, country) {
+        return (
+            this.firstName + ' ' + this.lastName + ',' + city + ',' + country
+        );
+    },
+};
+
+const person1 = {
+    firstName: 'John',
+    lastName: 'Doe',
+};
+
+person.fullName.call(person1, 'Oslo', 'Norway');
+
+
+Mais detalhes =>
+https://www.w3schools.com/js/js_function_call.asp
+
+
+
+                                                           _________________________
+                                                           ===  99. POLIMORFISMO  ===
+                                                           ----------------------------------------------
+
+
+O polimorfismo é a capacidade de um objeto responder de forma diferente a um mesmo método, dependendo do contexto em que é chamado. Isso significa que você pode usar o mesmo método com diferentes objetos e obter resultados diferentes, o que pode ser útil em muitas situações.
+
+
+Mais detalhes =>
+https://medium.com/@nicolasbontempo/programando-javascript-orientado-a-objetos-87b1e98af6e4
+https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/
+https://dev.to/gabrielhsilvestre/polimorfismo-5aog
+
+
+
+                                          ___________________________________________
+                                          ===  100. FACTORY FUNCTIONS + PROTOTYPES  ===
+                                          -------------------------------------------------------------------------------
+
+
+=
+
+
+
+
+                                                         ____________________________
+                                                         ===  INFORMAÇÕES EXTRAS   ===
+                                                         ---------------------------------------------------
+
+
+---> console.dir() :
+É um método no JavaScript usado para exibir informações detalhadas sobre um objeto no console do navegador. Ele é útil para inspecionar a estrutura e as propriedades de um objeto JavaScript. Quando você o utiliza, o console mostrará uma representação interativa do objeto, permitindo que você explore suas propriedades e métodos de forma mais conveniente e informativa. É especialmente útil ao depurar ou inspecionar objetos complexos no seu código
+
+
+
+

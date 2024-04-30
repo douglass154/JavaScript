@@ -240,7 +240,7 @@ class Aluno {
     }
 }
 
-let lucas = new Aluno('', 'Engenharia', 5)
+let lucas = new Aluno(" ", "Engenharia", 5)
 lucas.nomeAluno = 'Lucas'
 console.log(lucas.nome) //Lucas
 
