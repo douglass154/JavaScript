@@ -1,0 +1,190 @@
+
+                                                           ____________________________
+                                                           ===  102. CRIANDO CLASSES  ===
+                                                           ----------------------------------------------------
+
+
+Uma maneira de definir uma classe é usando uma declaração de classe. Para declarar uma classe, você deve usar a palavra-chave class seguida pelo nome da classe.
+
+Exemplo:
+
+class Retangulo {
+    constructor(altura, largura) {
+        this.altura = altura;
+        this.largura = largura;
+    }
+}
+
+
+Mais detalhes =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes
+https://www.w3schools.com/js/js_classes.asp
+
+
+
+                                                         ______________________________
+                                                         ===  102. GETTERS E SETTERS  ===
+                                                         ------------------------------------------------------
+
+
+É possível definir valores privados para classes utilizando Symbol, como mostrado na aula atual 102.
+
+Mas utilizando novos métodos adicionados com o ECMA Script 2022, há uma maneira mais fácil de se útilizar atributos e métodos privados dentro de uma classe.
+
+______________
+
+Também é possível útilizar atributos e métodos estáticos, isso faz com que o valor definido ocupe o mesmo lugar em memória e isso é ótimo quando quisermos ter um cache de um dado específico, o fazendo ser único em toda aplicação independente de quantas instancias da mesma classe existir.
+
+Observe um exemplo de como utilizar métodos assessores estáticos, possibilitando encapsulamento de atributos estáticos.
+
+class Empresa {
+    static #totalEmpresas = 0;
+
+    constructor() {
+        Empresa.#totalEmpresas++;
+    }
+
+    static get totalEmpresas() {
+        return Empresa.#totalEmpresas;
+    }
+}
+
+let empresa1 = new Empresa();
+let empresa2 = new Empresa();
+console.log(Empresa.totalEmpresas);
+// Output: 2
+
+
+Mais detalhes =>
+https://www.treinaweb.com.br/blog/novos-recursos-do-ecmascript-2022
+https://pt.stackoverflow.com/questions/428641/como-definir-atributos-privados-em-uma-fun%C3%A7%C3%A3o-construtora-utilizando-javascript
+
+
+
+                                                       _________________________________
+                                                       ===  103. HERANÇA COM CLASSES  ===
+                                                       ------------------------------------------------------------
+
+
+A herança de classes é um mecanismo que permite que uma classe herde propriedades e métodos de outra classe, facilitando a reutilização de código e a criação de hierarquias entre as classes.
+
+Na herança de classes em JavaScript, uma classe pode ser considerada como a “classe pai” ou “superclasse”, enquanto a classe que herda as propriedades e métodos é denominada “classe filha” ou “subclasse”.
+
+________________________
+
+---> Implementação da herança de classes em JavaScript
+
+Existem várias formas de implementar a herança de classes em JavaScript. Uma das maneiras mais comuns é utilizando a palavra-chave “extends” para criar uma classe filha que herda de uma classe pai.
+
+Exemplo:
+
+class Animal {
+    constructor(nome) {
+        this.nome = nome;
+    }
+
+    falar() {
+        console.log(`${this.nome} faz barulho.`);
+    }
+}
+
+class Cachorro extends Animal {
+    falar() {
+        console.log(`${this.nome} faz au au.`);
+    }
+}
+
+let meuCachorro = new Cachorro('Rex');
+meuCachorro.falar(); // Output: Rex faz au au.
+
+________________________
+
+---> Além disso, é possível utilizar o método “super()” para chamar o construtor da classe pai.
+
+Exemplo:
+
+class Animal {
+    constructor(nome) {
+        this.nome = nome;
+    }
+
+    falar() {
+        console.log(`${this.nome} faz barulho.`);
+    }
+}
+
+class Cachorro extends Animal {
+    constructor(nome, raca) {
+        super(nome);
+        this.raca = raca;
+    }
+
+    falar() {
+        console.log(`${this.nome} faz au au.`);
+    }
+
+    mostrarRaca() {
+        console.log(`Sou um ${this.raca}.`);
+    }
+}
+
+let meuCachorro = new Cachorro('Rex', 'Labrador');
+meuCachorro.falar(); // Output: Rex faz au au.
+meuCachorro.mostrarRaca(); // Output: Sou um Labrador.
+
+_______________________
+
+Mais detalhes =>
+https://awari.com.br/aprenda-sobre-a-heranca-de-classes-em-javascript/?utm_source=blog&utm_campaign=projeto+blog&utm_medium=Aprenda%20sobre%20a%20heran%C3%A7a%20de%20classes%20em%20JavaScript
+
+Mais detalhes (super) =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/super
+
+
+
+                                        ___________________________________________
+                                        ===  107. VALIDANDO FURMULÁRIO - CLASSES  ===
+                                        ------------------------------------------------------------------------------
+
+
+==> Informações e aprendizados retirados da aula:
+
+
+---> HTML DOM Elemento insertAdjacentElement():
+
+O método insertAdjacentElement() insere um elemento em uma posição especificada.
+
+Posições jurídicas:
+
+afterbegin (depois de começar):
+::: Inserido dentro da tag após o início do elemento (primeiro filho)
+
+afterend (depois do fim):
+::: Inserido fora da tag, Depois do elemento
+
+beforebegin (antes de começar, fora da tag)
+::: Inserido fora da tag, Antes do elemento
+
+beforeend (antes do fim, dentro da tag)
+::: Inserido dentro da tag, antes do final do elemento (último filho)
+
+_________________
+
+Sintaxe:
+element.insertAdjacentElement(position, element);
+
+________________
+
+Exemplo de usos abaixo:
+
+https://www.w3schools.com/jsref/met_node_insertadjacentelement.asp
+
+
+
+
+
+
+
+
+
+

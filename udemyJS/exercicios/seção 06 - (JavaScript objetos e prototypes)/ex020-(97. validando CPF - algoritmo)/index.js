@@ -21,6 +21,7 @@ Se o dígito for maior que 9, consideramos 0;
 function ValidacaoCPF(cpfEnviado) {
     Object.defineProperty(this, 'cpfLimpo', {
         enumerable: true,
+        configurable: false,
 
         get: function() {
             return cpfEnviado.replace(/\D+/g, '');

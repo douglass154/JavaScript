@@ -181,9 +181,9 @@ Uma função a qual serve como um setter, para setar o valor da propriedade, pod
 
 
 
-                                       ______________________________________
-                                       ===  92. MÉTODOS ÚTEIS PARA OBJETOS  ===
-                                       ----------------------------------------------------------------------
+                                                ______________________________________
+                                                ===  92. MÉTODOS ÚTEIS PARA OBJETOS  ===
+                                                ----------------------------------------------------------------------
 
 
 ________________________
@@ -293,7 +293,6 @@ https://www.w3schools.com/jsref/jsref_object_create.asp
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 
 _______________________
-
 
 ---> Object.getOwnPropertyDescriptor() :
 O método Object.getOwnPropertyDescriptor() retorna os descritores de propriedades de um objeto, e não altera o objeto original.
@@ -422,10 +421,99 @@ https://dev.to/gabrielhsilvestre/polimorfismo-5aog
 
 
 
+                                                           ________________________
+                                                           ===  101. Objeto map()  ===
+                                                           --------------------------------------------
 
-                                                         ____________________________
-                                                         ===  INFORMAÇÕES EXTRAS   ===
-                                                         ---------------------------------------------------
+
+O objeto Map contém pares de chave-valor e lembra a ordem original da inserção das chaves. Qualquer valor (objetos e valores primitivos) podem ser usados como chave ou valor.
+
+
+Descrição:
+::: Um objeto Map itera seus elementos na order da inserção - um loop for...of retorna um array de [key, value] para cada iteração
+
+_____________________
+
+A maneira correta para armazenar dados dentro do Map() é através do set(key,value)
+
+Exemplos:
+
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
+
+_____________________
+
+Métodos da instância:
+
+---> Map.prototype.clear():
+• Remove todos os pares chave/valor do objeto Map.
+
+_____
+
+---> Map.prototype.delete(key):
+• Retorna true se o elemento no objeto Map existia e tenha sido removido, ou false se o elemento não    existia. Map.prototype.has(key) irá retornar false após isso.
+
+_____
+
+---> Map.prototype.get(key):
+• Retorna o valor associado à chave, ou undefined se não há nada.
+
+_____
+
+---> Map.prototype.has(key):
+• Retorna uma asserção booleana se o valor tenha sido associado à chave no objeto Map ou não.
+
+_____
+
+---> Map.prototype.set(key, value):
+• Define o valor para a chave no objeto Map. Retorna o objeto Map
+
+______________________
+
+Métodos iterativos:
+
+---> Map.prototype[@@iterator]():
+• Retorna um novo objeto iterador que contèm um array de [chave, valor] para cada elemento do    objeto Map na ordem em que foram inseridos.
+
+_____
+
+---> Map.prototype.keys():
+• Retorna um novo objeto iterador que contèm as chaves de cada elemento do objeto Map na ordem    em que foram inseridos.
+
+_____
+
+---> Map.prototype.values():
+• Retorna um novo objeto iterador que contém os valores de cada elemento do objeto Map na ordem       em que foram inseridos.
+
+_____
+
+---> Map.prototype.entries():
+• Retorna um novo objeto iterador que contèm um array de [chave, valor] para cada elemento no       objeto Map na ordem em que foram inseridos.
+
+_____
+
+---> Map.prototype.forEach(callbackFn, thisArg):
+• Invoca o callbackFn uma vez para cada par chave-valor presente no objeto Map, na ordem em que       foram inseridos. Se um parâmetro thisArg é provido para o forEach, será usado o valor de this para       cada callback.
+
+_______________________
+
+Mais detalhes =>
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+
+
+                                                      ____________________________
+                                                      ===  INFORMAÇÕES EXTRAS   ===
+                                                      ---------------------------------------------------
 
 
 ---> console.dir() :

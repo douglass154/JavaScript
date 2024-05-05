@@ -319,8 +319,8 @@ https://www.freecodecamp.org/portuguese/news/um-guia-para-o-metodo-reduce-em-jav
 
 
 
-                                                    ________________________________                                                                                                   ===  87. FILTER + MAP + REDUCE  ===
-                                                    -----------------------------------------------------------
+                                                  ________________________________                                                                                                     ===  87. FILTER + MAP + REDUCE  ===
+                                                  -----------------------------------------------------------
 
 
 Exemplo para poder utilizar todos os métodos unidos:

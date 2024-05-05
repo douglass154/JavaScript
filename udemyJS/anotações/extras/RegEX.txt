@@ -1,0 +1,44 @@
+
+                                                        ===  sites para DOM  ===
+
+https://bognarjunior.wordpress.com/2014/12/11/mouse-events-javascript-dom/
+
+
+
+                                               ===  EXPRESSÕES REGULARES  ===
+
+
+---> /\D+/g
+Essa expressão é uma representação númerica que representa qualquer coisa que não for um número. Então tudo que não for um número, vai ser pego nessa expressão regular;
+
+
+---> /^([\d]{3})([\d]{3})([\d]{3})([\d]{2})$/
+Essa expressão regular verifica se são todos números;
+
+
+---> /^(\d)\1{10}/
+Essa expressão regular verifica se tem sequência de numeros repetidos;
+
+
+---> /^[a-zA-Z0-9]+$/g
+Essa expressão regular verifica se existem apenas números e/ou letras;
+
+
+
+                                                         ===  MÉTODO MATCH()  ===
+
+
+O método match() compara uma string com uma expressão regular, retorna um array com as correspondências e retorna nulo se nenhuma correspondência for encontrada.
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/jsref_match.asp
+
+
+
+
+                                                             ===  USO DO THIS  ===
+
+
+https://desenvolvimentoparaweb.com/javascript/this-javascript-dominando/
+https://www.dio.me/articles/o-que-e-this-em-javascript
+https://ricardo-reis.medium.com/entendendo-o-this-5876c3009aaf

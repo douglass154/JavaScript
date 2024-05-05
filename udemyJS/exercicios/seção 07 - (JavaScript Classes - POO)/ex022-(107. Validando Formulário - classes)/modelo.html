@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Modelo HTML</title>
+</head>
+<body>
+    <section class="container">
+        <h1>Formulário de cadastro</h1>
+        <div class="regras">
+            <ul>
+                <li><p>Nenhum campo pode estar vazio</p></li>
+                <li><p>Usuário só poderá conter letras e/ou números</p></li>
+                <li><p>Usuário deverá ter entre 3 e 12 caracteres</p></li>
+                <li><p>Senha precisa ter entre 6 e 12 caracteres</p></li>
+            </ul>
+        </div>
+
+        <form method="post" class="formulario" autocomplete="off">
+            <div class="form form-name">
+                <label>Nome</label>
+                <input type="text" class="nome validar">
+            </div>
+
+            <div class="form form-sobrenome">
+                <label>Sobrenome</label>
+                <input type="text" class="sobrenome validar">
+            </div>
+
+            <div class="form form-cpf">
+                <label>CPF</label>
+                <input type="text" class="cpf validar">
+            </div>
+
+            <div class="form form-user">
+                <label>Usuário</label>
+                <input type="text" class="usuario validar" placeholder="Apenas letras e/ou números">
+            </div>
+
+            <div class="form form-password">
+                <label>Senha</label>
+                <input type="password" class="password validar" placeholder="6 à 12 caracteres">
+            </div>
+
+            <div class="form form-confirm-password">
+                <label>Confirmar Senha</label>
+                <input type="password" class="confirm-password validar" placeholder="Repetir senha">
+            </div>
+
+            <button class="button" type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="./assets/js/validaCPF.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

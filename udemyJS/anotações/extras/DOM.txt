@@ -1,0 +1,55 @@
+
+                                           ===  HTML DOM Element insertAdjacentElement()  ===
+
+
+O método insertAdjacentElement() insere um elemento em uma posição especificada.
+
+Posições jurídicas:
+
+afterbegin (depois de começar):
+::: Inserido dentro da tag após o início do elemento (primeiro filho)
+
+afterend (depois do fim):
+::: Inserido fora da tag, Depois do elemento
+
+beforebegin (antes de começar, fora da tag)
+::: Inserido fora da tag, Antes do elemento
+
+beforeend (antes do fim, dentro da tag)
+::: Inserido dentro da tag, antes do final do elemento (último filho)
+
+_________________
+
+Sintaxe:
+element.insertAdjacentElement(position, element);
+
+_________________
+
+Exemplo de usos abaixo:
+
+https://www.w3schools.com/jsref/met_node_insertadjacentelement.asp
+
+
+
+                                            ===  HTML DOM Element previousElementSibling  ===
+
+
+A propriedade previousElementSibling retorna o elemento anterior no mesmo nível da árvore.
+A propriedade previousElementSibling é somente leitura.
+
+Sintaxe:
+element.previousElementSibling
+
+Valor de retorno:
+O elemento irmão anterior. Null se não existir nenhum irmão anterior.
+
+_________________
+
+Mais detalhes =>
+https://www.w3schools.com/jsref/prop_element_previouselementsibling.asp
+
+
+
+
+
+
