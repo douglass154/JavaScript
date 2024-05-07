@@ -1,0 +1,101 @@
+
+                                                                  ______________________
+                                                                  ===  108. PROMISES  ===
+
+
+O objeto Promise representa a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante.
+
+Uma Promise está em um destes estados:
+
+pending: estado inicial, nem cumprido nem rejeitado.
+fulfilled: significa que a operação foi concluída com sucesso.
+rejected: significa que a operação falhou.
+
+Sintaxe: 
+• new Promise((resolve, rejected) => {})
+
+________________
+
+---> Quando usamos promises? 
+Usamos promises quando vamos utilizar alguma coisa assíncrona (Quando não temos certeza de quando vai terminar).
+
+A programação assíncrona é uma técnica que permite que seu programa inicie uma tarefa potencialmente de longa duração e ainda seja capaz de responder a outros eventos enquanto essa tarefa é executada, em vez de ter que esperar até que essa tarefa seja concluída.
+
+
+
+                                              _________________________________________
+                                              ===  109. MÉTODOS ÚTEIS PARA PROMISES  ===
+
+
+---> Promise.all(iterable)
+O método Promise.all() retorna uma única Promise que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises. Se uma das promises passadas for recusada, todas são recusadas junto. É rejeitado com o motivo da primeira promise que foi rejeitada.
+
+_________________
+
+---> Promise.race(iterable)
+O método Promise.race() retorna uma promise que resolve ou rejeita assim que a primeira de uma das promises no iterável for resolvida ou rejeitada, com o valor ou razão daquela promise.
+
+Sintaxe
+• Promise.race(iterable);
+
+iterable: Um objeto iterável, como um Array.
+
+_________________
+
+---> Promise.resolve(value)
+retorna um objeto Promise que é resolvido com o valor passado. Se o valor for thenable (ex: tiver um método then), a promise retornada irá "seguir" esse thenable, adotando seu estado final; se o valor for uma promise, o objeto será o resultado da chamada Promise.resolve; do contrário a promise será realizada com o valor.
+
+Sintaxe:
+• Promise.resolve(value);
+• Promise.resolve(promise);
+• Promise.resolve(thenable);
+
+Parametros:
+---> value:
+::: Argumento a ser resolvido pela Promise. Pode também ser uma Promise ou um thenable a resolver.
+
+_________________
+
+---> Promise.reject(motivo)
+retorna um objeto Promise que é rejeitada com um dado motivo.
+
+O método estático Promise.reject retorna uma Promise que é rejeitada. Para fins de debug e captura de erros seletiva, é útil que o motivo seja uma instanceof Error.
+
+Sintaxe:
+• Promise.reject(motivo);
+
+Parâmetros:
+---> motivo:
+::: Motivo pelo qual este Promise foi rejeitado.
+
+
+
+                                                         __________________________
+                                                         ===  110. ASYNC / AWAIT  ===
+
+
+A declaração async function define uma função assíncrona, que retorna um objeto AsyncFunction.
+Você também pode definir funções assíncronas usando uma expressão async function.
+
+Sintaxe:
+async function nome(param, param, ...param) {
+    instruções;
+}
+
+---> nome:
+::: O nome da função.
+
+---> param:
+::: O nome de um parâmetro a ser passado para a função.
+
+---> instruções:
+::: As instruções que compõem o corpo da função.
+
+
+
+
+
+
+
+
+
