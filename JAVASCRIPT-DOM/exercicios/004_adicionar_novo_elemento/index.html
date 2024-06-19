@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ADICIONAR NOVO ELEMENTO AO HTML</title>
+    <style>
+        .caixa {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        .alerta {
+            padding: 5px;
+            text-align: center;
+            background-color: crimson;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            padding: 15px;
+            width: 200px;
+            margin: 0 auto;
+            background-color: rgb(4, 161, 57);
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="caixa">
+        <p>Neste div apenas existe um parágrafo</p>
+    </div>
+
+    <button class="btn">Clique Aqui</button>
+
+    <script>
+        
+        //criar o elemento
+        function criaParagrafo() {
+            const p = document.createElement('p');
+            p.className = 'alerta';
+            p.innerText = 'Está é uma mensagem de alerta!' 
+            
+            return p;
+        }
+        
+        function executa() {
+            const p = criaParagrafo();
+
+            const div = document.querySelector('.caixa');
+            div.appendChild(p)
+        }
+
+        const button = document.querySelector('.btn');
+        button.addEventListener('click', () => {
+            for(let alerta of document.querySelectorAll('.alerta')) {
+                alerta.remove();
+            }
+            
+            executa()
+        })
+
+    </script>
+</body>
+</html>

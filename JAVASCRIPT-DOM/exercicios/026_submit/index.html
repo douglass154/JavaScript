@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FORMULÁRIOS EVENTO SUBMIT</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            border: 1px solid black;
+            width: 250px;
+            height: 200px;
+        }
+
+        div {
+            width: 150px;
+        }
+
+        input {
+            width: 140px;
+        }
+
+        input[type='submit'] {
+            width: 150px;
+            margin-top: 10px;
+            height: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post" id="formulario">
+        <div>
+            <label for="usuario">Usuário</label>
+            <input type="text" name="usuario" id="usuario" autocomplete="off">
+        </div>
+
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha">
+        </div>
+
+        <input type="submit" value="Entrar">
+    </form>
+
+    <script>
+        const form = document.querySelector('#formulario');
+        form.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+
+            // Efetuar verificações e validações
+            // No caso de validações OK, submeter, caso contrário preventDefault()
+
+            console.log('cancelei o submit');
+        })
+
+    </script>
+</body>
+</html>

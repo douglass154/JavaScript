@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>COORDENADAS DO CURSOR DO MOUSE</title>
+    <style>
+        div {
+            padding: 30px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Este é meu elemento
+    </div>
+
+    <script>
+        document.querySelector('div').addEventListener('mousemove', () => {
+            // console.log(`${event.pageX} : ${event.pageY}`);
+
+            if (event.pageX < 100) {
+                event.target.style.backgroundColor = 'red';
+            } else if (event.pageX < 200){
+                event.target.style.backgroundColor = 'yellow';
+            } else if (event.pageX < 300){
+                event.target.style.backgroundColor = 'green';
+            } else if (event.pageX < 400){
+                event.target.style.backgroundColor = 'skyblue';
+            } else if (event.pageX <= 500){
+                event.target.style.backgroundColor = 'orange';
+            }
+        })
+    </script>
+</body>
+</html>

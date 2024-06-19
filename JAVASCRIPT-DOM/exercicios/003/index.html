@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FUNÇÕES RELACIONADAS COM ATRIBUTOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="container">
+        <h1 id="titulo">Título da notícia</h1>
+        <h3 id="sumario">Sumário da notícia</h3>
+        <img src="imgs/noticia-2.png" alt="Notícias" id="noticias">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio vel ullam velit, soluta quam beatae amet veritatis explicabo quia quidem accusantium asperiores? Recusandae vel aliquam perferendis aperiam quisquam! Sint.</p>
+    </div>
+
+    <script>
+        let element = document.querySelector('h3');
+
+        // hasAttribute
+        if(element.hasAttribute('id')) {
+            console.log('Sim');
+        };
+
+        //getAttribute
+        console.log(element.getAttribute('id'));
+
+        //setAttribute
+        element.setAttribute('title', 'Título do sumário');
+
+        //removeAttribute
+        const img = document.querySelector('#noticias');
+        img.removeAttribute('alt');
+
+        //attributes
+        console.log(img.attributes[1])
+
+    </script>
+</body>
+</html>

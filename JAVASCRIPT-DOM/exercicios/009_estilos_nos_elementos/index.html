@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ALTERAR ESTILOS COM STYLE</title>
+    <style>
+        .p1 {
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            border: 1px solid crimson;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="p1">Lorem ipsum dolor sit amet consectetur.</p>
+
+    <script>
+        const p = document.querySelector('.p1');
+        // p.style.backgroundColor = 'lightgreen';
+        // p.style.borderWidth = '5px'
+        // p.style.borderStyle = 'dashed'
+        p.style.cssText = 'background-color: lightgreen;'
+        
+    </script>
+</body>
+</html>

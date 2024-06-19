@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MÉTODOS PARA ADICIONAR ELEMENTOS NO DOM</title>
+    <style>
+        .container {
+            border: 1px solid lightgray;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        p {
+            background-color: green;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        Dentro do div
+    </div>
+
+    <script>
+        const div = document.querySelector('.container');
+
+        // insertAdjacentText
+        // // Adicionar texto antes do div
+        // div.insertAdjacentText('beforebegin', 'AAAA');
+
+        // // Adicionar dentro do div, mas no início
+        // div.insertAdjacentText('afterbegin', 'BBBB');
+
+        // // Adicionar dentro do div, mas no final
+        // div.insertAdjacentText('beforeend', 'CCCC');
+        
+        // // Adicionar texto depois do div
+        // div.insertAdjacentText('afterend', 'DDDD');
+
+        
+        //insetAdjacentHTML
+        // div.insertAdjacentHTML('beforebegin', '<p>AAAA</p>')
+        // div.insertAdjacentHTML('afterbegin', '<p>BBBB</p>')
+        // div.insertAdjacentHTML('beforeend', '<p>CCCC</p>')
+        // div.insertAdjacentHTML('afterend', '<p>DDDD</p>')
+
+
+        // insertAdjacentElement
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        const p3 = document.createElement('p');
+        const p4 = document.createElement('p');
+        p1.innerText = 'Parágrafo 1';
+        p2.innerText = 'Parágrafo 2';
+        p3.innerText = 'Parágrafo 3';
+        p4.innerText = 'Parágrafo 4';
+
+        div.insertAdjacentElement('beforebegin', p1);
+        div.insertAdjacentElement('afterbegin', p2);
+        div.insertAdjacentElement('beforeend', p3);
+        div.insertAdjacentElement('afterend', p4);
+    </script>
+</body>
+</html>

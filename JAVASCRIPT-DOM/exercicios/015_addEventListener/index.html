@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>INTRODUÇÃO AOS EVENTOS</title>
+</head>
+<body>
+    <h1 id="titulo_1">Título 1</h1>
+    <h1 id="titulo_2">Título 2</h1>
+
+    <button id="adicionar">Adicionar eventos</button>
+    <button id="botao">Executar eventos</button>
+    <button id="remover">Remover eventos</button>
+
+    <script>
+        document.querySelector('#adicionar').addEventListener('click', adicionarEventos);
+        document.querySelector('#remover').addEventListener('click', removerEventos);
+
+        function adicionarEventos() {
+            const botaoExec = document.querySelector('#botao');
+            botaoExec.addEventListener('click', executar_1);
+            botaoExec.addEventListener('click', executar_2);
+        }
+
+        function executar_1() {
+            const data = new Date();
+            document.querySelector('#titulo_1').innerText = data.getSeconds();
+        }
+
+        function executar_2() {
+            const data = new Date();
+            document.querySelector('#titulo_2').innerText = data.getSeconds();
+        }
+
+        function removerEventos() {
+            document.querySelector('#botao').removeEventListener('click', executar_2);
+        }
+    </script>
+</body>
+</html>

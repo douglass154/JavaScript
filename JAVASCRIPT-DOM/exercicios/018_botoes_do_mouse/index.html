@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MOUSE BUTTONS E TECLAS ESPECIAIS</title>
+    <style>
+        div {
+            padding: 30px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Este é meu elemento
+    </div>
+
+    <script>
+        document.querySelector('div').addEventListener('mousedown', () => {
+            // console.log(event.button);
+
+            if (event.shiftKey) {
+                console.log('OK - shift')
+            }
+            
+            if (event.altKey) {
+                console.log('OK - alt')
+            }
+
+            if (event.ctrlKey) {
+                console.log('OK - ctrl')
+            }
+
+            if (event.ctrlKey && event.shiftKey) {
+                console.log('Ctrl + Shift - combinado')
+            }
+        })
+    </script>
+</body>
+</html>

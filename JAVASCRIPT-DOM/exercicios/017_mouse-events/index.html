@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MOUSE EVENTS</title>
+    <style>
+        div {
+            padding: 30px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Este é meu elemento
+    </div>
+
+    <script>
+        const div = document.querySelector('div');
+
+        div.addEventListener('click', () => console.log('click'));
+
+        div.addEventListener('mousedown', () => console.log('mouse down'));
+        div.addEventListener('mouseup', () => console.log('mouse up'));
+
+        // div.addEventListener('mouseenter', () => console.log('mouse enter'));
+        // div.addEventListener('mouseover', () => console.log('mouse over'));
+
+        // div.addEventListener('mouseleave', () => console.log('mouse leave'));
+        // div.addEventListener('mouseout', () => console.log('mouse out'));
+        
+        // div.addEventListener('mousemove', () => console.log('mouse move'));
+
+        // div.addEventListener('dblclick', () => console.log('double click'));
+
+        div.addEventListener('contextmenu', () => console.log('menu de contexto'));
+        
+    </script>
+</body>
+</html>

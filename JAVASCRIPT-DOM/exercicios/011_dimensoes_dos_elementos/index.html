@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DIMENSÕES E LOCALIZAÇÃO DE ELEMENTOS HTML</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: lightblue;
+            overflow: auto;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            padding: 7px;
+            background-color: lightgreen;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, provident. Maiores quo quisquam impedit in sunt? Porro iste similique unde fuga sed aliquid. Eius nulla odio sit est explicabo distinctio.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam, ducimus sequi quis consectetur nihil nobis nam rerum optio quaerat praesentium dolorem aspernatur blanditiis corrupti, perferendis fuga consequatur ullam suscipit.
+    </div>
+
+    <p id="propriedades"></p>
+    <button>Executar</button>
+
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', () => {
+            const div = document.querySelector('div');
+            const p = document.querySelector('#propriedades');
+
+            let resultados = '';
+            resultados += `offsetLeft = ${div.offsetLeft} </br>`
+            resultados += `offsetTop = ${div.offsetTop} </br>`
+            resultados += `offsetWidth = ${div.offsetWidth} </br>`
+            resultados += `offsetHeight = ${div.offsetHeight} </br></br>`
+
+            resultados += `scrollTop = ${div.scrollTop}</br>` 
+            resultados += `scrollHeight = ${div.scrollHeight}` 
+
+            p.innerHTML = resultados;
+        })
+    
+    </script>
+</body>
+</html>

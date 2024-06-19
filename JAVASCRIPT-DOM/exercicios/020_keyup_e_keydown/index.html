@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>KEYUP E KEYDOWN</title>
+</head>
+<body>
+    <input type="text" id="caixa_texto" autocomplete="off">
+    <p>Escreva 'Douglas'</p>
+
+    <script>
+        const input = document.querySelector('#caixa_texto');
+        const p = document.querySelector('p');
+
+        // input.addEventListener('keydown', (event) => {
+            
+        //     if (event.key === 'a'.toLowerCase()) {
+        //         event.preventDefault();
+        //     }
+
+        // })
+
+        input.addEventListener('keyup', (e) => {
+
+            const valor = e.target.value;
+            const tecla = e.key
+
+            if (valor === '') {
+                p.innerText = "Escreva 'Douglas'"
+            }
+
+            if (tecla === 'Enter' && valor === 'Douglas') {
+                p.innerText = 'Parabêns'
+            } else if (tecla === 'Enter' && valor !== 'Douglas'){
+                p.innerText = 'Digite o nome correto!'
+            }
+            
+        })
+
+    </script>
+</body>
+</html>

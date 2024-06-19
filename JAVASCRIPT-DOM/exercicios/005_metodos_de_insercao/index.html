@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MÉTODOS PARA ADICIONAR ELEMENTOS NO DOM pt2</title>
+    <style>
+        .container {
+            border: 1px solid lightgray;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        p {
+            background-color: crimson;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        Dentro do div
+    </div>
+
+    <script>
+        const div = document.querySelector('.container');
+
+        // // Adicionar texto antes do div
+        // div.before('AAAA');
+
+        // // Adicionar dentro do div, mas no início
+        // div.prepend('BBBB');
+
+        // // Adicionar dentro do div, mas no final
+        // div.append('CCCC');
+
+        // // Adicionar texto depois do div
+        // div.after('DDDD');
+
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        const p3 = document.createElement('p');
+        const p4 = document.createElement('p');
+        p1.innerText = 'Parágrafo 1';
+        p2.innerText = 'Parágrafo 2';
+        p3.innerText = 'Parágrafo 3';
+        p4.innerText = 'Parágrafo 4';
+
+        // Adicionar texto antes do div
+        div.before(p1);
+
+        // Adicionar dentro do div, mas no início
+        div.prepend(p2);
+
+        // Adicionar dentro do div, mas no final
+        div.append(p3);
+
+        // Adicionar texto depois do div
+        div.after(p4);
+    </script>
+</body>
+</html>

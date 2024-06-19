@@ -93,6 +93,14 @@ async function nome(param, param, ...param) {
 
 
 
+                                                       ___________________________
+                                                       ===  112. FETCH API (GET)  ===
+
+
+O método fetch() inicia o processo de busca de um recurso de um servidor.
+O método fetch() retorna uma Promise que resolve para um objeto Response.
+
+
 
 
 

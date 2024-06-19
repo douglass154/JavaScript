@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>INTRODUÇÃO AOS EVENTOS</title>
+    <style>
+        body {
+            font-size: 1.2rem;
+            padding: 20px;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3 id="titulo">Este texto tem <i><u>importância</u></i></h3>
+    <div class="noticia">
+        <h1>Título da notícia <strong>um</strong></h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni alias fugit facere laboriosam architecto delectus iusto quaerat inventore quasi, rem, tempora nihil doloremque voluptas! Sed amet consequuntur quam qui vel!</p>
+    </div>
+
+    <div>
+        <h1>Título da notícia 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet amet, debitis, quod, dolore itaque alias earum cum nihil nostrum exercitationem dolor! Quasi libero voluptates laudantium dolor corporis nemo pariatur excepturi?</p>
+    </div>
+
+    <img src="imgs/noticia-1.png" alt="Notícias" id="noticias">
+
+    <script>
+        function mudarTitulo() {
+            let element = document.querySelector('#titulo');
+            element.innerHTML = 'Novo Título';
+            element.style.color = 'red';
+        }
+
+        const img = document.querySelector('#noticias');
+        img.addEventListener('click', () => {
+            mudarTitulo();
+        })
+    </script>
+</body>
+</html>

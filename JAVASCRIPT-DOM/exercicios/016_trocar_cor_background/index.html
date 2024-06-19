@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>EXERCÍCIOS COM EVENTOS</title>
+</head>
+<body>
+    <h1>Título 1</h1>
+    <button>Fundo Amarelo</button>
+
+    <script>
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', () => {
+
+            const h1 = document.querySelector('h1');
+            
+            if(btn.innerText === 'Fundo Amarelo') {
+                h1.style.backgroundColor = 'yellow';
+                btn.innerText = 'Fundo transparente'
+            } else {
+                h1.style.backgroundColor = 'transparent';
+                btn.innerText = 'Fundo Amarelo';
+            }
+
+        })
+    </script>
+</body>
+</html>

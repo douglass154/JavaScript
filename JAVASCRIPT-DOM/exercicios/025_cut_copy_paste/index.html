@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FORMULÁRIOS EVENTOS CUT, COPY E PASTE</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post" name="formulario">
+        <div>
+            <label for="tarefa">Tarefa</label>
+            <input type="text" name="tarefa" id="tarefa" autocomplete="off">
+        </div>
+
+        <div>
+            <label for="tempo">Quanto tempo</label>
+            <select name="tempo" id="tempo">
+                <option value="1">1 dia</option>
+                <option value="2">2 dias</option>
+                <option value="3">3 dias</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        const tarefa = document.querySelector('[name="tarefa"]');
+        const tempo = document.querySelector('[name="tempo"]')
+
+        // Evento cut
+        tarefa.addEventListener('cut', () => {
+            console.log('recortado')
+        })
+
+
+        // // Evento copy
+        tarefa.addEventListener('copy', () => {
+            console.log('copiado')
+        })
+
+
+        // Evento paste
+        tarefa.addEventListener('paste', () => {
+            console.log('Colado')
+        })
+
+    </script>
+</body>
+</html>

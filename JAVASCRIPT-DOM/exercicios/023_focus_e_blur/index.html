@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FORMULÁRIOS EVENTO FOCUS E BLUR</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+
+        .focus {
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post" name="formulario">
+        <div>
+            <label for="usuario">Usuário:</label>
+            <input type="text" name="usuario" id="usuario" autocomplete="off">
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" autocomplete="off">
+        </div>
+        <div>
+            <input class="submit" type="submit" value="Entrar">
+        </div>
+    </form>
+
+    <script>
+        // const user = document.querySelector('[name="usuario"]')
+        // const senha = document.querySelector('[name="senha"]')
+        const inputs = document.querySelectorAll('[name="formulario"] input');
+
+        inputs.forEach((boxes, index) => {
+
+            //focus
+            boxes.addEventListener('focus', (evento) => {
+                if (index === 2) {
+                    return
+                }
+
+                evento.target.classList.add('focus');
+            });
+
+            //blur
+            boxes.addEventListener('blur', (evento) => {
+                if (index === 2) {
+                    return
+                }
+
+                evento.target.classList.remove('focus');
+            });
+            
+        });
+
+        // //focus
+        // user.addEventListener('focus', (e) => {
+        //     e.target.classList.add('focus');
+        // })
+
+        // //blur
+        // user.addEventListener('blur', (e) => {
+        //     e.target.classList.remove('focus');
+        // });
+
+        const button = document.querySelector('.submit');
+
+        button.addEventListener('click', (evento) => {
+            evento.preventDefault();
+        });
+
+    </script>
+</body>
+</html>

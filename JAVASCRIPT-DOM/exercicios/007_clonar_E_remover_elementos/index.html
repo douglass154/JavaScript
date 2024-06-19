@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CLONAR E REMOVER ELEMENTOS</title>
+    <style>
+        .container {
+            border: 1px solid lightgray;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <p>Parágrafo dentro da div</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        
+        // Clonar Elementos
+        // const div = document.querySelector('.container')
+        // const div2 = div.cloneNode();
+        // div.insertAdjacentElement("afterend", div2);
+
+        
+        // Remover Elementos
+        // const div = document.querySelector('.container');
+        // div.remove();
+
+        // const paragrafo = document.querySelector('.container > p');
+        // paragrafo.remove();
+
+        // const lista = document.querySelectorAll('.container > ul > li');
+        // lista[1].remove();
+
+        const lista = document.querySelector('.container > ul > li:last-child');
+        lista.remove();
+    </script>
+</body>
+</html>

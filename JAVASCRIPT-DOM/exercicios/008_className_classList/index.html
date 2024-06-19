@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CLASSNAME E CLASSLIST</title>
+    <style>
+        .p1 {
+            background-color: yellow;
+        }
+
+        .p2 {
+            background-color: green;
+        }
+
+        .space {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+    <script>
+        const p = document.querySelector('p');
+
+        // ClassName é uma propriedade que permite ler e alterar as classes do elemento. 
+        // p.className = 'p2 space'
+        // console.log(p.className);
+
+        // ClassList
+        p.classList.add('p2');
+        // p.classList.remove('space');
+        p.classList.toggle('space')
+        // .toggle adiciona ou remove uma classe. Caso exista, remove. Caso não exista, adiciona.
+
+        if(p.classList.contains('space')) {
+            console.log('Contém espaço.');
+        } else {
+            console.log('Não tem espaço.')
+        }
+
+    </script>
+</body>
+</html>

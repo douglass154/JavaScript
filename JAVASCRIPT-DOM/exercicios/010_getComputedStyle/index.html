@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BUSCAR PROPRIEDADES DE CSS E GETCOMPUTEDSTYLE</title>
+    <style>
+        h1 {
+            color: crimson;
+            margin-top: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+    <p style="color: #0000ff; margin-top: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aspernatur.</p>
+
+    <script>
+        let p = document.querySelector('p');
+        console.log(`Cor do parágrafo: ${p.style.color}`);
+        console.log(`margin-top do parágrafo: ${p.style.marginTop}`);
+        
+        const propriedades = getComputedStyle(document.querySelector('h1'));
+        console.log(`Cor do título: ${propriedades.color}`);
+        console.log(`margin-top do título: ${propriedades.marginTop}`);
+        console.log(`border do título: ${propriedades.border}`);
+    
+    </script>
+</body>
+</html>
